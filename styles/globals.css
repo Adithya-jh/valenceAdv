@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 html,
 body {
   padding: 0;
@@ -13,15 +15,157 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
 }
+
+/*Navbar Section*/
+
+.navbar {
+  background-color: #161619;
+  padding: 0 25px;
+}
+
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  height: 120px;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.navbarComponent {
+  display: flex;
+  flex: 1;
+}
+
+.navbarContainer li {
+  display: inline-block;
+  padding: 0px 15px;
+  font-weight: 400;
+}
+
+.navbarContainer ul {
+  padding-left: 0px;
+}
+
+.navbarComponent.right {
+  justify-content: flex-end;
+}
+
+.navbarComponent.left {
+  justify-content: flex-start;
+}
+
+.navbarContainer h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbarContainer li label {
+  padding: 10px;
+}
+
+.navbarContainer li select {
+  background-color: transparent;
+}
+
+.navbarContainer li option {
+  background-color: black
+}
+
+.cart{
+  display: inline-block;
+}
+
+.cart p{
+  display: inline-block;
+  margin: 0px 10px;
+  background-color: white;
+  padding: 1px 5px;
+  border-radius: 50%;
+  color: black;
+  font-weight: bold;
+  font-size: 13px;
+}
+.searchBar input{
+  background-color: white;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 50px;
+  width: 200px;
+  margin: auto;
+  cursor:auto;
+  color: black;
+  text-indent: 15px;
+
+}
+
+.underlineHover {
+  position: relative;
+}
+
+.underlineHover:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: rgb(255, 255, 255);
+  transition: width .3s ease;
+  -webkit-transition: width .3s ease;
+}
+
+.underlineHover:hover:after {
+  width: 100%;
+  left: 0;
+  background: rgb(255, 255, 255);
+}
+
+.openClose{
+  display: none;
+}
+
+
+
 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+
   body {
     color: rgb(0, 0, 0);
     background: rgb(255, 255, 255);
-    
+
   }
+}
+
+@media(max-width: 1250px) {
+  .openClose{
+    display: inline-block;
+    flex: 1;
+  }
+  .openClose i{
+    font-size: 25px;
+  }
+  .cart i{
+    font-size: 25px;
+  }
+  
+  .navbarItems{
+    display: none;
+  }
+  .cart p{
+
+    padding: 0px 7px;
+    padding-bottom: 1px;
+    border-radius: 50%;
+    font-size: 20px;
+  }
+
+  
+  
 }

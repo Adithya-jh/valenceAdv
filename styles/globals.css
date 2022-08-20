@@ -20,10 +20,7 @@ a {
 
 /*Navbar Section*/
 
-.navbar {
-  background-color: #161619;
-  padding: 0 25px;
-}
+
 
 .navbarContainer {
   display: flex;
@@ -33,6 +30,8 @@ a {
   height: 120px;
   padding: 15px;
   font-size: 16px;
+  background-color: #161619;
+  padding: 0 25px;
 }
 
 .navbarComponent {
@@ -127,7 +126,30 @@ a {
 .openClose{
   display: none;
 }
-
+.mobileNavbar{
+  display: none;
+}
+.signInBar{
+    display: flex;
+    background: rgba(212, 211, 211, 0.1);
+    height: 100%;
+    position: relative;
+    top: -120px;
+    overflow-x: hidden;
+    width: 100%;
+    margin: auto;
+    justify-content: flex-end; 
+}
+.signInBarContainer{
+  width: 40vw;
+  background-color: white;
+  overflow-y: auto;
+  
+}
+.signInBarContainer .signInHeader{
+  display: flex;
+  justify-content: space-between;
+}
 
 
 
@@ -149,21 +171,85 @@ a {
     flex: 1;
   }
   .openClose i{
-    font-size: 25px;
+    font-size: 20px;
   }
-  .cart i{
-    font-size: 25px;
-  }
+  
   
   .navbarItems{
     display: none;
   }
-  .cart p{
+  
+  
+  .mobileNavbar{
+    display: flex;
+    background: rgba(212, 211, 211, 0.1);
+    height: 100vh;
+    position: fixed;
+    overflow-x: hidden;
+    width: 0;    
+  }
+  .mobileNavbar .mNavbarContainer{
+    width: 0;
+    transition: 0.2s;
+  }
 
-    padding: 0px 7px;
-    padding-bottom: 1px;
-    border-radius: 50%;
+  .mobileNavbar.active .mNavbarContainer{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+    width: 50vw;
+    overflow-y: auto;
+  }
+  .mobileNavbar.active{
+    width: 100vw;
+  }
+  .mNavbarContainer ul{
+    padding-top: 25px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    
+
+  }
+  .mNavbarContainer li{
+    padding: 20px 0px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .mNavbarContainer li label{
+    padding-right: 15px;
+
+  }
+  .searchBar input{
+    width: 35vw;
     font-size: 20px;
+    border-radius: 0px;
+    border: none;
+    text-indent: 2px;
+    box-shadow: none;
+    transition: .3s ease;;
+    
+  }
+  .searchBar input:focus{
+    outline: none;
+    box-shadow: 0 1px 0 0 rgb(0, 0, 0);
+}
+  .underlineHover:after {
+    background: black;
+  }
+  .underlineHover:hover:after{
+    background: black;
+  }
+  .navbarContainer{
+    height: 70px;
+  }
+  .navbarContainer h1{
+    font-size: 25px;
+  }
+
+  @media(max-width: 450px) {
+    .mobileNavbar.active .mNavbarContainer{
+      width: 100vw;
+    }
   }
 
   

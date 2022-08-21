@@ -12,101 +12,122 @@ const Navbar = () => {
         setToggle(false)
     }
     const [isActive, setIsActive] = useState(false)
-    console.log(isActive)
-    
+    const [sideBar, setSideBar] = useState(false);
+
 
 
     return (
-        <div className="navbar">
-            <div className="navbarContainer">
-                <div className="navbarComponent left">
-                    <div className="openClose" onClick={()=>{setIsActive(!isActive)}} >
-                        {isActive ? <i class="fa-solid fa-xmark" ></i> : <i class="fa-solid fa-bars" ></i>}
-                    </div>
+        <>
+            <div>
+                <div id={sideBar && "mySidenav"} class="sidenav">
+                    <OutsideClickHandler onOutsideClick={()=>{setSideBar(false)}}>
+                        <div className="signInBar">
+                            <div className="signInBarContainer">
+                                <div className="signInHeader">
+                                    <p>Sign in</p>
+                                    <i class="fa-solid fa-xmark" onClick={() => { setSideBar(false) }}></i>
+                                </div>
+                                <div className="signInInput">
+                                    <div>
+                                        <div class="floating-label-group">
+                                            <input type="text" id="username" class="form-control" autocomplete="off" autofocus required />
+                                            <label class="floating-label">Username</label>
+                                        </div>
+                                        <div class="floating-label-group">
+                                            <input type="password" id="password" class="form-control" autocomplete="off" required />
+                                            <label class="floating-label">Password</label>
+                                        </div>
+                                    </div>
+                                    <div className="rememberMe">
+                                        <input type="checkbox"></input>
+                                        <label>Remember me</label>
+                                    </div>
 
-                    <span className="navbarItems">
-                        <ul>
-                            <li><a className="underlineHover" href="#">Home</a></li>
-                            <li><a className="underlineHover" href="#">About Us</a></li>
-                            <li><a className="underlineHover" href="#">Products</a></li>
-                            <li><a className="underlineHover" href="#">Services</a></li>
-                            <li><a className="underlineHover" href="#">Contact Us</a></li>
-                        </ul>
-                    </span>
+                                    <button className="signInBtn">SIGN IN</button>
+                                    <button className="signUpBtn">CREATE AN ACCOUNT</button>
+                                </div>
+                                <div className="lostPass">
+                                    <a><div><span>LOST YOUR PASSWORD ?</span></div></a>
+                                </div>
+                            </div>
+                        </div>
+                    </OutsideClickHandler>
                 </div>
-                <h1>VALENCE</h1>
-                <div className="navbarComponent right">
-                    <ul>
-                        <span className="navbarItems">
-                            <li><span className="underlineHover">Sign in</span></li>
-                            <li className="searchBar">
-                                {toggle ?
-                                    <OutsideClickHandler onOutsideClick={closeToggle}><input placeholder="Search" type="text"></input></OutsideClickHandler> : <i className="fa-solid fa-magnifying-glass" onClick={openToggle}></i>}
-                            </li>
+                <div id="mainNavbar">
+                    <div className="navbar">
+                        <div className="navbarContainer">
+                            <div className="navbarComponent left">
+                                <div className="openClose" onClick={() => { setIsActive(!isActive) }} >
+                                    {isActive ? <i class="fa-solid fa-xmark" ></i> : <i class="fa-solid fa-bars" ></i>}
+                                </div>
 
-                            <li>
-                                <label>LN</label>
-                                <select id="languages" name="languages">
-                                    <option value="english">EN</option>
-                                    <option value="arabic">AR</option>
-                                </select>
-                            </li>
-                        </span>
-                        <li className="cart">
+                                <span className="navbarItems">
+                                    <ul>
+                                        <li><a className="underlineHover" href="#">Home</a></li>
+                                        <li><a className="underlineHover" href="#">About Us</a></li>
+                                        <li><a className="underlineHover" href="#">Products</a></li>
+                                        <li><a className="underlineHover" href="#">Services</a></li>
+                                        <li><a className="underlineHover" href="#">Contact Us</a></li>
+                                    </ul>
+                                </span>
+                            </div>
+                            <h1>VALENCE</h1>
+                            <div className="navbarComponent right">
+                                <ul>
+                                    <span className="navbarItems">
+                                        <li onClick={() => { setSideBar(true) }}><span className="underlineHover">Sign in</span></li>
+                                        <li className="searchBar">
+                                            {toggle ?
+                                                <OutsideClickHandler onOutsideClick={closeToggle}><input placeholder="Search" type="text"></input></OutsideClickHandler> : <i className="fa-solid fa-magnifying-glass" onClick={openToggle}></i>}
+                                        </li>
 
-                            <a href="#">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </a>
-                            <p className="cartNum"><span>0</span></p>
-                        </li>
+                                        <li>
+                                            <label>LN</label>
+                                            <select id="languages" name="languages">
+                                                <option value="english">EN</option>
+                                                <option value="arabic">AR</option>
+                                            </select>
+                                        </li>
+                                    </span>
+                                    <li className="cart">
+
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                        <p className="cartNum"><span>0</span></p>
+                                    </li>
 
 
-                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className={isActive ? "mobileNavbar active" : "mobileNavbar"}>
+                            <div className="mNavbarContainer">
+                                <ul>
+                                    <li className="searchBar">
+                                        <input placeholder="Search" type="text"></input>
+                                    </li>
+                                    <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">Home</a></li>
+                                    <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">About Us</a></li>
+                                    <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">Products</a></li>
+                                    <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">Services</a></li>
+                                    <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">Contact Us</a></li>
+                                    <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">Sign in</a></li>
+                                    <li>
+                                        <label>LN</label>
+                                        <select id="languages" name="languages">
+                                            <option value="english">EN</option>
+                                            <option value="arabic">AR</option>
+                                        </select>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className={isActive ? "mobileNavbar active" : "mobileNavbar"}>
-                <div className="mNavbarContainer">
-                
-                    <ul>
-                        <li className="searchBar">
-                            <input placeholder="Search" type="text"></input>
-                        </li>
-                        <li onClick={()=>{setIsActive(!isActive)}}><a className="underlineHover" href="#">Home</a></li>
-                        <li onClick={()=>{setIsActive(!isActive)}}><a className="underlineHover" href="#">About Us</a></li>
-                        <li onClick={()=>{setIsActive(!isActive)}}><a className="underlineHover" href="#">Products</a></li>
-                        <li onClick={()=>{setIsActive(!isActive)}}><a className="underlineHover" href="#">Services</a></li>
-                        <li onClick={()=>{setIsActive(!isActive)}}><a className="underlineHover" href="#">Contact Us</a></li>
-                        <li onClick={()=>{setIsActive(!isActive)}}><a className="underlineHover" href="#">Sign in</a></li>
-                        <li>
-                            <label>LN</label>
-                            <select id="languages" name="languages">
-                                <option value="english">EN</option>
-                                <option value="arabic">AR</option>
-                            </select>
-                        </li>
-                    </ul>
-                    
-                </div>
-            </div>
-            <div className="signInBar">
-                <div className="signInBarContainer">
-                    <div className="signInHeader">
-                        <p>Sign in</p>
-                        <i class="fa-solid fa-xmark" ></i>
-                    </div>
-                    <div className="signInInput">
-                        <input placeholder="Username"></input>
-                        <input placeholder="Password"></input>
-                        <input type="chekbox"></input>
-                        <label>Remember me</label>
-                        <button>SIGN IN</button>
-                        <button>CREATE AN ACCOUNT</button>
-                    </div>
-                    <a><p>LOST YOUR PASSWORD</p></a>
-                </div>
-                
-            </div>
-        </div>
+        </>
     )
 }
 

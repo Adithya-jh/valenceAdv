@@ -73,11 +73,11 @@ a {
   background-color: black
 }
 
-.cart{
+.cart {
   display: inline-block;
 }
 
-.cart p{
+.cart p {
   display: inline-block;
   margin: 0px 10px;
   background-color: white;
@@ -87,14 +87,15 @@ a {
   font-weight: bold;
   font-size: 13px;
 }
-.searchBar input{
+
+.searchBar input {
   background-color: white;
   padding: 5px 5px;
   border: none;
   border-radius: 50px;
   width: 200px;
   margin: auto;
-  cursor:auto;
+  cursor: auto;
   color: black;
   text-indent: 15px;
 
@@ -123,32 +124,12 @@ a {
   background: rgb(255, 255, 255);
 }
 
-.openClose{
+.openClose {
   display: none;
 }
-.mobileNavbar{
+
+.mobileNavbar {
   display: none;
-}
-.signInBar{
-    display: flex;
-    background: rgba(212, 211, 211, 0.1);
-    height: 100%;
-    position: relative;
-    top: -120px;
-    overflow-x: hidden;
-    width: 100%;
-    margin: auto;
-    justify-content: flex-end; 
-}
-.signInBarContainer{
-  width: 40vw;
-  background-color: white;
-  overflow-y: auto;
-  
-}
-.signInBarContainer .signInHeader{
-  display: flex;
-  justify-content: space-between;
 }
 
 
@@ -166,20 +147,21 @@ a {
 }
 
 @media(max-width: 1250px) {
-  .openClose{
+  .openClose {
     display: inline-block;
     flex: 1;
   }
-  .openClose i{
+
+  .openClose i {
     font-size: 20px;
   }
-  
-  
-  .navbarItems{
+
+
+  .navbarItems {
     display: none;
   }
-  
-  
+
+
   .mobileNavbar{
     display: flex;
     background: rgba(212, 211, 211, 0.1);
@@ -193,65 +175,275 @@ a {
     transition: 0.2s;
   }
 
-  .mobileNavbar.active .mNavbarContainer{
+  .mobileNavbar.active .mNavbarContainer ul{
     background-color: rgb(255, 255, 255);
     box-shadow: 0 20px 35px rgba(0,0,0,0.1);
     width: 50vw;
     overflow-y: auto;
+    height: 100%;
+    margin-top: 0;
   }
   .mobileNavbar.active{
     width: 100vw;
   }
-  .mNavbarContainer ul{
+
+  .mNavbarContainer ul {
     padding-top: 25px;
     list-style: none;
     display: flex;
     flex-direction: column;
-    
+
 
   }
-  .mNavbarContainer li{
+
+  .mNavbarContainer li {
     padding: 20px 0px;
     font-size: 15px;
     font-weight: 500;
   }
-  .mNavbarContainer li label{
+
+  .mNavbarContainer li label {
     padding-right: 15px;
 
   }
-  .searchBar input{
+
+  .searchBar input {
     width: 35vw;
     font-size: 20px;
     border-radius: 0px;
     border: none;
     text-indent: 2px;
     box-shadow: none;
-    transition: .3s ease;;
-    
+    transition: .3s ease;
+    ;
+
   }
-  .searchBar input:focus{
+
+  .searchBar input:focus {
     outline: none;
     box-shadow: 0 1px 0 0 rgb(0, 0, 0);
-}
+  }
+
   .underlineHover:after {
     background: black;
   }
-  .underlineHover:hover:after{
+
+  .underlineHover:hover:after {
     background: black;
   }
-  .navbarContainer{
+
+  .navbarContainer {
     height: 70px;
   }
-  .navbarContainer h1{
+
+  .navbarContainer h1 {
     font-size: 25px;
   }
 
   @media(max-width: 450px) {
-    .mobileNavbar.active .mNavbarContainer{
+    .mobileNavbar.active .mNavbarContainer {
       width: 100vw;
     }
   }
 
+
+
+}
+
+/*Side Navbar*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  padding-top: 10px;
+  transition: 0.5s;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#mainNavbar {
+  transition: margin-left .5s;
+  padding: 0;
+}
+
+
+
+#mySidenav {
+  width: 40vw;
+
+}
+
+
+.signInBarContainer .signInHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.signInBarContainer .signInInput {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.signInBarContainer button {
+  padding: 15px 0px;
+  margin: 15px 0px;
+  font-weight: bold;
+}
+
+.signInBarContainer a div {
+  text-align: center;
+}
+
+.signInBarContainer {
+  padding: 50px;
+}
+
+.signInBar {
+  font-size: 16px;
+}
+
+
+.signInInput {
+  margin-top: 4vh;
+  padding: 50px;
+}
+
+.signInHeader p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.signInHeader i {
+  font-size: 20px;
+}
+
+.signInBarContainer input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgb(65, 65, 65);
+  text-indent: 2px;
+  color: black;
+  width: 100%;
+}
+
+.signInBtn {
+  background-color: black;
+  border: 1px solid rgb(49, 49, 49);
+}
+
+.signUpBtn {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+
+.ipCheckBox {
+  background-color: transparent;
+  color: white;
+}
+
+.lostPass {
+  margin-top: 40px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.lostPass span {
+  padding-bottom: 5px;
+  border-bottom: 2px solid black;
+}
+
+
+.floating-label-group {
+  position: relative;
+}
+
+.floating-label-group .floating-label {
+  font-size: 13px;
+  color: #343434;
+  font-weight: 500;
+  position: absolute;
+  pointer-events: none;
+  top: 20px;
+  left: 0px;
+  transition: all 0.1s ease;
+  font-size: 14px;
+
+}
+
+.floating-label-group input:focus~.floating-label,
+.floating-label-group input:not(:focus):valid~.floating-label {
+  top: -15px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 1;
+  padding-top: 15px;
+  color: #858585;
+}
+
+.floating-label-group input {
+  margin: 20px 0px;
+  font-size: 16px;
+  padding: 5px 0px;
+}
+.floating-label-group input:focus{
+  outline: none;
+}
+.rememberMe{
+  display: flex;
+  margin: 10px 0px;
+  justify-content: left;
+}
+.rememberMe input{
+  flex: 0;
+}
+.rememberMe label{
+  flex: 1;
+  padding-left: 10px;
+}
+
+@media(max-width: 1200px) {
+  .mobileNavbar.active .mNavbarContainer {
+    width: 100vw;
+  }
+  .signInInput {
+    margin-top: 4vh;
+    padding: 30px;
+  }
+  .signInBarContainer{
+    padding: 20px;
+  }
+  #mySidenav {
+    width: 50vw;
   
+  }
+}
+
+@media(max-width: 450px) {
+  #mySidenav {
+    width: 100vw;
   
+  }
+  .signInInput {
+    margin-top: 4vh;
+    padding: 25px;
+  }
+  .signInBarContainer{
+    padding: 25px;
+  }
 }

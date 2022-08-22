@@ -495,6 +495,7 @@ a {
   font-size: 16px;
   padding: 15px;
   height: fit-content;
+  z-index: -1;
 }
 
 .footerSection .footerMain {
@@ -599,7 +600,6 @@ a {
 
 /*FAQ Section*/
 
-
 .faqHeaderItem {
   color: white;
   text-align: center;
@@ -629,6 +629,71 @@ a {
   overflow-y: hidden;
   top: 0px;
   width: 100%;
+  z-index: -1;
 }
+.faqBody{
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+  padding: 20px;
+  
+}
+
+.faqBodyContainer{
+  display: flex;
+  justify-content: space-between;
+}
+.faqBody .faqBodyContainer span:before {
+  content: '—';
+  font-size: 30px;
+}
+.faqBody .faqBodyContainer span{
+  flex: 1;
+  padding-top: 30px;
+}
+.faqBodySpacing{
+  flex: 5;
+}
+.faqBodyContent{
+  display: flex;
+}
+.faqBodyHeader{
+  flex: 4;
+}
+.faqBodyContent i{
+  flex : 1;
+  text-align: right;
+  margin: auto;
+  font-size: 25px;
+}
+.faqBodyHeader h3{
+  padding: 5px 0px;
+  font-size: 24px;
+  line-height: 1.5em;
+  color: #343434;
+}
+.faqBodySpacing h1{
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+.faqBodySpacing p{
+  transition: 0.5s;
+  line-height: 1.7em;
+  color: #2b2b2b;
+  padding-bottom: 20px;
+}
+.faqContainer{
+  cursor: pointer;
+}
+.faqBodyHeader{
+  
+  border-bottom: #cbcbcb 1px solid;
+}
+
+
+
+
+
+
 
 

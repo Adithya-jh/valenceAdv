@@ -18,9 +18,18 @@ a {
   font-family: 'Quicksand', sans-serif;
 }
 
+
 /*Navbar Section*/
 
+.navbar {
+  top: 0px;
+  width: 100%;
+  position: fixed;
+}
 
+#mainNavbar {
+  margin-bottom: 120px;
+}
 
 .navbarContainer {
   display: flex;
@@ -162,7 +171,7 @@ a {
   }
 
 
-  .mobileNavbar{
+  .mobileNavbar {
     z-index: 1;
     display: flex;
     background: rgba(212, 211, 211, 0.1);
@@ -170,22 +179,24 @@ a {
     position: fixed;
     overflow-x: hidden;
     width: 0;
-    overflow-y: auto;  
+    overflow-y: auto;
     transition: .3s ease;
   }
-  .mobileNavbar .mNavbarContainer{
+
+  .mobileNavbar .mNavbarContainer {
     width: 0;
     transition: .3s ease;
   }
 
-  #mobileNavbarActive .mNavbarContainer ul{
+  #mobileNavbarActive .mNavbarContainer ul {
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
     width: 50vw;
     height: 100%;
     margin-top: 0;
   }
-  #mobileNavbarActive{
+
+  #mobileNavbarActive {
     width: 100vw;
   }
 
@@ -217,7 +228,6 @@ a {
     text-indent: 2px;
     box-shadow: none;
     transition: .3s ease;
-    ;
 
   }
 
@@ -237,6 +247,9 @@ a {
   .navbarContainer {
     height: 70px;
   }
+  #mainNavbar {
+    margin-bottom: 70px;
+  }
 
   .navbarContainer h1 {
     font-size: 25px;
@@ -246,10 +259,11 @@ a {
     #mobileNavbarActive .mNavbarContainer {
       width: 80vw;
     }
-    .navbarComponent.right{
+
+    .navbarComponent.right {
       align-items: flex-end;
     }
-    
+
   }
 
 
@@ -279,7 +293,7 @@ a {
   margin-left: 50px;
 }
 
-#mainNavbar{
+#mainNavbar {
   transition: margin-left .5s;
   padding: 0;
 }
@@ -407,18 +421,22 @@ a {
   font-size: 16px;
   padding: 5px 0px;
 }
-.floating-label-group input:focus{
+
+.floating-label-group input:focus {
   outline: none;
 }
-.rememberMe{
+
+.rememberMe {
   display: flex;
   margin: 10px 0px;
   justify-content: left;
 }
-.rememberMe input{
+
+.rememberMe input {
   flex: 0;
 }
-.rememberMe label{
+
+.rememberMe label {
   flex: 1;
   padding-left: 10px;
 }
@@ -427,29 +445,34 @@ a {
   #mobileNavbarActive .mNavbarContainer {
     width: 100vw;
   }
+
   .signInInput {
     margin-top: 4vh;
     padding: 30px;
   }
-  .signInBarContainer{
+
+  .signInBarContainer {
     padding: 20px;
   }
+
   #mySidenav {
     width: 50vw;
-  
+
   }
 }
 
 @media(max-width: 450px) {
   #mySidenav {
     width: 100vw;
-  
+
   }
+
   .signInInput {
     margin-top: 4vh;
     padding: 25px;
   }
-  .signInBarContainer{
+
+  .signInBarContainer {
     padding: 25px;
   }
 }
@@ -460,61 +483,72 @@ a {
 
 
 .footerSection {
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: rgb(255, 255, 255);
   color: black;
   text-align: center;
-  box-shadow: 20px 20px 35px rgba(0,0,0,0.5);
+  box-shadow: 20px 20px 35px rgba(0, 0, 0, 0.5);
   padding: 0 25px;
   font-size: 16px;
   padding: 15px;
   height: fit-content;
 }
-.footerSection .footerMain{
+
+.footerSection .footerMain {
   display: flex;
   justify-content: space-around;
 }
+
 .navbarComponent {
   display: flex;
   flex: 1;
 }
+
 .footerFlex {
   flex: 1;
 }
-.footerFlex.left{
+
+.footerFlex.left {
   text-align: start;
-  padding-left:5px ;
+  padding-left: 5px;
 }
-.footerFlex.right{
+
+.footerFlex.right {
   text-align: end;
-  padding-right:5px ;
+  padding-right: 5px;
 }
-.footerFlex span{
+
+.footerFlex span {
   padding: 0px 15px;
 }
-.footerHeader h1{
+
+.footerHeader h1 {
   padding: 7px 0px;
 }
-.footerHeader p{
+
+.footerHeader p {
   padding-bottom: 10px;
 }
 
-.footerEmailSection input:focus{
+.footerEmailSection input:focus {
   outline: none;
 }
-.footerEmailSection{
+
+.footerEmailSection {
   margin-bottom: 60px;
 }
-.footerMain{
+
+.footerMain {
   border-top: 1px solid rgb(143, 143, 143);
   width: 90%;
   margin: auto;
   padding-top: 15px;
 }
-.footerEmailSection input{
+
+.footerEmailSection input {
   width: 400px;
   padding: 15px;
   font-size: 16px;
@@ -524,7 +558,8 @@ a {
   color: black;
   font-weight: 500;
 }
-.footerEmailSection button{
+
+.footerEmailSection button {
   padding: 15px;
   font-size: 16px;
   background-color: white;
@@ -533,24 +568,28 @@ a {
   border-bottom: 1px solid rgb(143, 143, 143);
   font-weight: bold;
 }
-.footerSection{
+
+.footerSection {
   font-weight: bold;
 }
 
 @media(max-width: 1150px) {
-  .footerEmailSection input{
+  .footerEmailSection input {
     width: 200px;
     font-size: 10px;
     padding: 10px;
   }
-  .footerEmailSection button{
+
+  .footerEmailSection button {
     font-size: 10px;
     padding: 10px;
   }
-  .footerSection{
+
+  .footerSection {
     font-size: 12px;
   }
-  .footerMain{
+
+  .footerMain {
     flex-direction: column;
     align-items: center;
   }
@@ -558,17 +597,38 @@ a {
 }
 
 
+/*FAQ Section*/
 
 
+.faqHeaderItem {
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+}
 
+.faqHeader h1{
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+.faqHeader p{
+  font-size: 24px;
+  width: 70%;
+  margin: auto;
+}
 
-
-
-
-
-
-
-
-
+.faqHeader {
+  height: 480px;
+  padding: 0;
+  margin: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)),url("https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/08/faq-page-header.jpg?fit=1920%2C600&ssl=1");
+  display: flex;
+  background-position: top;
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  top: 0px;
+  width: 100%;
+}
 
 

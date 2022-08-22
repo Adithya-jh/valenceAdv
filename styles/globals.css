@@ -364,6 +364,7 @@ a {
   margin-top: 40px;
   font-size: 14px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .lostPass span {

@@ -2,6 +2,8 @@
 
 
 const Footer = () => {
+    const date = new Date();
+    
     return(
         <div className="footerSection">
             <div className="footerContainer">
@@ -17,7 +19,7 @@ const Footer = () => {
                 </div>
                 <div className="footerMain">
                     <div className="footerFlex left">
-                        <p>@2022 Valence All rights reserved</p>
+                        <p>© {date.getFullYear()} Valence All rights reserved</p>
                     </div>
                     <div className="footerFlex">
                         <p><span>Privacy Policy</span><span>FAQ's</span><span>Contact Us</span></p>

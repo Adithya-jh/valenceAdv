@@ -170,18 +170,18 @@ a {
     position: fixed;
     overflow-x: hidden;
     width: 0;
-    overflow-y: auto;   
+    overflow-y: auto;  
+    transition: 0.2s; 
   }
   .mobileNavbar .mNavbarContainer{
     width: 0;
-    transition: 0.5s;
+    transition: 0.2s;
   }
 
   .mobileNavbar.active .mNavbarContainer ul{
     background-color: rgb(255, 255, 255);
     box-shadow: 0 20px 35px rgba(0,0,0,0.1);
     width: 50vw;
-    
     height: 100%;
     margin-top: 0;
   }
@@ -276,7 +276,7 @@ a {
   margin-left: 50px;
 }
 
-#mainNavbar {
+#mainNavbar{
   transition: margin-left .5s;
   padding: 0;
 }
@@ -285,7 +285,6 @@ a {
 
 #mySidenav {
   width: 40vw;
-
 }
 
 

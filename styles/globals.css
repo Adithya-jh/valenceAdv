@@ -171,21 +171,21 @@ a {
     overflow-x: hidden;
     width: 0;
     overflow-y: auto;  
-    transition: 0.2s; 
+    transition: .3s ease;
   }
   .mobileNavbar .mNavbarContainer{
     width: 0;
-    transition: 0.2s;
+    transition: .3s ease;
   }
 
-  .mobileNavbar.active .mNavbarContainer ul{
+  #mobileNavbarActive .mNavbarContainer ul{
     background-color: rgb(255, 255, 255);
     box-shadow: 0 20px 35px rgba(0,0,0,0.1);
     width: 50vw;
     height: 100%;
     margin-top: 0;
   }
-  .mobileNavbar.active{
+  #mobileNavbarActive{
     width: 100vw;
   }
 
@@ -243,8 +243,11 @@ a {
   }
 
   @media(max-width: 450px) {
-    .mobileNavbar.active .mNavbarContainer {
+    #mobileNavbarActive .mNavbarContainer {
       width: 80vw;
+    }
+    .navbarComponent.right{
+      align-items: flex-end;
     }
     
   }
@@ -421,7 +424,7 @@ a {
 }
 
 @media(max-width: 1200px) {
-  .mobileNavbar.active .mNavbarContainer {
+  #mobileNavbarActive .mNavbarContainer {
     width: 100vw;
   }
   .signInInput {

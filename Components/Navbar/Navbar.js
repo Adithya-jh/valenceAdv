@@ -126,7 +126,7 @@ const Navbar = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className={isActive ? "mobileNavbar active" : "mobileNavbar"}>
+                        <div className="mobileNavbar" id={isActive && "mobileNavbarActive"}>
                             <div className="mNavbarContainer">
                                 <ul>
                                     <li className="searchBar">

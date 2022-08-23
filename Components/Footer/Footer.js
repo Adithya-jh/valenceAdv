@@ -1,4 +1,4 @@
-
+import Link from 'next/link'
 
 
 const Footer = () => {
@@ -22,7 +22,7 @@ const Footer = () => {
                         <p>© {date.getFullYear()} Valence All rights reserved</p>
                     </div>
                     <div className="footerFlex">
-                        <p><span>Privacy Policy</span><span>FAQ's</span><span>Contact Us</span></p>
+                        <p><span>Privacy Policy</span><Link href="/faq"><a><span>FAQ's</span></a></Link><span>Contact Us</span></p>
                     </div>
                     <div className="footerFlex right">
                         <p><i class="fa-brands fa-linkedin-in"></i></p>

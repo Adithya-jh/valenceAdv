@@ -22,7 +22,7 @@ const Footer = () => {
                         <Link href="/"><p>© {date.getFullYear()} Valence All rights reserved</p></Link>
                     </div>
                     <div className="footerFlex">
-                        <p><span><Link href="#">Privacy Policy</Link></span><span><Link href="/faq">FAQ's</Link></span><span><Link href="/contactus">Contact Us</Link></span></p>
+                        <p><span><Link href="#">Privacy Policy</Link></span><span><Link href="/faq">FAQ's</Link></span><span><Link href="/contact">Contact Us</Link></span></p>
                     </div>
                     <div className="footerFlex right">
                         <p><Link href="https://www.linkedin.com/in/valenceadvancedmaterials/"><i class="fa-brands fa-linkedin-in"></i></Link></p>

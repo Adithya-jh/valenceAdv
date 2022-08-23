@@ -89,7 +89,7 @@ const Navbar = () => {
                                         <li><a className="underlineHover" href="#">About Us</a></li>
                                         <li><a className="underlineHover" href="#">Products</a></li>
                                         <li><a className="underlineHover" href="#">Services</a></li>
-                                        <li><a className="underlineHover" href="#">Contact Us</a></li>
+                                        <li><a className="underlineHover" href="/contact">Contact Us</a></li>
                                     </ul>
                                 </span>
                             </div>
@@ -136,7 +136,7 @@ const Navbar = () => {
                                     <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">About Us</a></li>
                                     <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">Products</a></li>
                                     <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">Services</a></li>
-                                    <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">Contact Us</a></li>
+                                    <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="/contact">Contact Us</a></li>
                                     <li onClick={() => { setIsActive(!isActive); setSideBar(true)}}><a className="underlineHover" href="#">Sign in</a></li>
                                     <li>
                                         <label>LN</label>

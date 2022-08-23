@@ -19,13 +19,13 @@ const Footer = () => {
                 </div>
                 <div className="footerMain">
                     <div className="footerFlex left">
-                        <p>© {date.getFullYear()} Valence All rights reserved</p>
+                        <Link href="/"><p>© {date.getFullYear()} Valence All rights reserved</p></Link>
                     </div>
                     <div className="footerFlex">
-                        <p><span>Privacy Policy</span><Link href="/faq"><a><span>FAQ's</span></a></Link><span>Contact Us</span></p>
+                        <p><span><Link href="#">Privacy Policy</Link></span><span><Link href="/faq">FAQ's</Link></span><span><Link href="/contactus">Contact Us</Link></span></p>
                     </div>
                     <div className="footerFlex right">
-                        <p><i class="fa-brands fa-linkedin-in"></i></p>
+                        <p><Link href="https://www.linkedin.com/in/valenceadvancedmaterials/"><i class="fa-brands fa-linkedin-in"></i></Link></p>
                     </div>
 
                 </div>

@@ -494,6 +494,7 @@ a {
   font-size: 16px;
   padding: 15px;
   height: fit-content;
+  cursor: pointer;
 }
 
 .footerSection .footerMain {
@@ -601,17 +602,19 @@ a {
 .faqHeaderItem {
   color: white;
   text-align: center;
-  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .faqHeader h1{
   font-size: 80px;
   margin-bottom: 30px;
+
 }
 .faqHeader p{
   font-size: 24px;
   width: 70%;
-  margin: auto;
 }
 
 .faqHeader {
@@ -683,13 +686,70 @@ a {
 .faqContainer{
   cursor: pointer;
 }
-.faqBodyHeader{
-  
+.faqBodyHeader{  
   border-bottom: #cbcbcb 1px solid;
 }
 
+@media(max-width: 1150px) {
+  .faqHeader p{
+    width: 80%;
+  }
+  .faqBody{
+    width: 95%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 20px;
+    
+  }
+  .faqHeader {
+    height: 550px;
+  }
+  .faqBodyContainer{
+    display: flex;
+    justify-content: space-between;
+  }
+  .faqHeader h1{
+    padding-top: 10px;
+  }
 
+}
+@media(max-width: 450px) {
+  .faqHeader p{
+    font-size: 20px;
+    width: 90%;
+  }
+  .faqHeader h1{
+    font-size: 50px;
+    padding-top: 60px;
+  }
+  .faqBodyHeader h3{
+    padding: 5px 0px;
+    font-size: 20px;
+    line-height: 1.5em;
+    color: #343434;
+  }
+  .faqBodySpacing h1{
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  .faqBodySpacing p{
+    transition: 0.5s;
+    line-height: 1.7em;
+    color: #2b2b2b;
+    padding-bottom: 20px;
+  }
+  .faqBodySpacing i{
+    font-size: 20px;
+  }
+  .faqBody .faqBodyContainer span:before {
+    font-size: 20px;
+  }
+  .faqBody .faqBodyContainer span{
+    flex: 1;
+    padding-top: 25px;
+  }
 
+}
 
 
 

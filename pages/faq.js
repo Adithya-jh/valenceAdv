@@ -11,6 +11,8 @@ const FAQ = () => {
         questionTwo: false,
         questionThree: true,
     });
+
+    
     return (
         <div className="faqPage">
             <Navbar />

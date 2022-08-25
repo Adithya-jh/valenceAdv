@@ -134,7 +134,14 @@ const Navbar = () => {
                             <div className="mNavbarContainer">
                                 <ul>
                                     <li className="searchBar">
-                                        <input placeholder="Search" type="text"></input>
+                                        {toggle ?
+                                            <OutsideClickHandler onOutsideClick={() => { setToggle(false) }}>
+                                                <div className="openSearchBar">
+                                                    <i className="fa-solid fa-magnifying-glass" onClick={() => { setToggle(true) }}></i>
+                                                    <input placeholder="Search" type="text"></input>
+                                                </div>
+                                            </OutsideClickHandler> :
+                                            <i className="fa-solid fa-magnifying-glass" onClick={() => { setToggle(true) }}></i>}
                                     </li>
                                     <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">Home</a></li>
                                     <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">About Us</a></li>
@@ -143,9 +150,9 @@ const Navbar = () => {
                                     <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="/contact">Contact Us</a></li>
                                     <li onClick={() => { setIsActive(!isActive); setSideBar(true) }}><a className="underlineHover" href="#">Sign in</a></li>
                                     <li>
-                                        <label>LN</label>
+                                        <label>Language</label>
                                         <select id="languages" name="languages">
-                                            <option value="english">EN</option>
+                                            <option defaultChecked value="english">EN</option>
                                             <option value="arabic">AR</option>
                                         </select>
                                     </li>

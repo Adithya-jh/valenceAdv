@@ -188,6 +188,9 @@ a {
   .navbarItems {
     display: none;
   }
+  .navbarContainer img {
+    width: 150px;
+  }
 
 
   .mobileNavbar {
@@ -233,6 +236,7 @@ a {
     font-size: 16px;
     font-weight: 500;
   }
+  
 
   .mNavbarContainer li label {
     padding-right: 15px;
@@ -240,10 +244,7 @@ a {
   }
 
   .searchBar input {
-    width: 35vw;
-    font-size: 20px;
-    border-radius: 0px;
-    border: none;
+    width: 30vw;
     text-indent: 2px;
     box-shadow: none;
     transition: .3s ease;
@@ -632,6 +633,9 @@ a {
   .footerMain {
     flex-direction: column;
     align-items: center;
+  }
+  .footerFlex.left{
+    text-align: center;
   }
 
 }

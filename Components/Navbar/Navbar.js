@@ -8,31 +8,31 @@ const Navbar = () => {
     const [isActive, setIsActive] = useState(false)
     const [sideBar, setSideBar] = useState(false);
     const [signUp, setSignUp] = useState(false);
-    
+
 
 
 
     return (
         <>
             <div>
-            <OutsideClickHandler onOutsideClick={() => { setSideBar(false); setSignUp(false) }}>
-                <div id={sideBar && "mySidenav"} class="sidenav">
-                    
+                <OutsideClickHandler onOutsideClick={() => { setSideBar(false); setSignUp(false) }}>
+                    <div id={sideBar && "mySidenav"} class="sidenav">
+
                         <div className="signInBar">
                             <div className="signInBarContainer">
                                 <div className="signInHeader">
-                                    {signUp ? <p>Sign up</p>:<p>Sign in</p>}
-                                    <i class="fa-solid fa-xmark" onClick={() => { setSideBar(false) }}></i>
+                                    {signUp ? <p>Sign up</p> : <p>Sign in</p>}
+                                    <div className="closeButton" onClick={() => { setSideBar(false) }}><p>Close</p> <i class="fa-solid fa-xmark" ></i></div>
                                 </div>
                                 {!signUp && <div>
                                     <div className="signInInput">
                                         <div>
                                             <div class="floating-label-group">
-                                                <input type="text" id="username" class="form-control" autocomplete="off" autofocus required />
+                                                <input type="text" id="username" class="form-control" autoComplete="off" autoFocus required />
                                                 <label class="floating-label">Username</label>
                                             </div>
                                             <div class="floating-label-group">
-                                                <input type="password" id="password" class="form-control" autocomplete="off" required />
+                                                <input type="password" id="password" class="form-control" autoComplete="off" required />
                                                 <label class="floating-label">Password</label>
                                             </div>
                                         </div>
@@ -41,8 +41,8 @@ const Navbar = () => {
                                             <label>Remember me</label>
                                         </div>
 
-                                        <button className="signInBtn">SIGN IN</button>
-                                        <button className="signUpBtn" onClick={()=>{setSignUp(true)}}>CREATE AN ACCOUNT</button>
+                                        <a className="signInBtn">SIGN IN</a>
+                                        <a className="signUpBtn" onClick={() => { setSignUp(true) }}>CREATE AN ACCOUNT</a>
                                     </div>
                                     <div className="lostPass">
                                         <a><div><span>LOST YOUR PASSWORD ?</span></div></a>
@@ -52,11 +52,11 @@ const Navbar = () => {
                                     <div className="signInInput">
                                         <div>
                                             <div class="floating-label-group">
-                                                <input type="text" id="username" class="form-control" autocomplete="off" autofocus required />
+                                                <input type="text" id="username" class="form-control" autoComplete="off" autoFocus required />
                                                 <label class="floating-label">Username</label>
                                             </div>
                                             <div class="floating-label-group">
-                                                <input type="password" id="password" class="form-control" autocomplete="off" required />
+                                                <input type="password" id="password" class="form-control" autoComplete="off" required />
                                                 <label class="floating-label">Password</label>
                                             </div>
                                         </div>
@@ -64,16 +64,16 @@ const Navbar = () => {
 
                                         </p>
 
-                                        <button className="signInBtn">SIGN UP</button>
+                                        <a className="signInBtn">SIGN UP</a>
                                     </div>
-                                    <div className="lostPass" onClick={()=>{setSignUp(false)}}>
+                                    <div className="lostPass" onClick={() => { setSignUp(false) }}>
                                         <a><div><span>ALREADY HAS AN ACCOUNT</span></div></a>
                                     </div>
                                 </div>}
                             </div>
                         </div>
-                    
-                </div>
+
+                    </div>
                 </OutsideClickHandler>
                 <div id="mainNavbar">
                     <div className="navbar">
@@ -93,23 +93,27 @@ const Navbar = () => {
                                     </ul>
                                 </span>
                             </div>
-                            <h1>VALENCE</h1>
+                            {/*<h1>VALENCE</h1>*/}
+                            <img src={"https://firebasestorage.googleapis.com/v0/b/valence-am.appspot.com/o/Asserts%2Flogo.png?alt=media&token=e093bed7-8127-4c0b-a60a-027546c6f659"}></img>
                             <div className="navbarComponent right">
                                 <ul>
                                     <span className="navbarItems">
                                         <li onClick={() => { setSideBar(true) }}><span className="underlineHover">Sign in</span></li>
                                         <li className="searchBar">
                                             {toggle ?
-                                                <OutsideClickHandler onOutsideClick={()=>{setToggle(false)}}>
-                                                    <input placeholder="Search" type="text"></input>
-                                                </OutsideClickHandler> : 
-                                                <i className="fa-solid fa-magnifying-glass" onClick={()=>{setToggle(true)}}></i>}
+                                                <OutsideClickHandler onOutsideClick={() => { setToggle(false) }}>
+                                                    <div className="openSearchBar">
+                                                        <i className="fa-solid fa-magnifying-glass" onClick={() => { setToggle(true) }}></i>
+                                                        <input placeholder="Search" type="text"></input>
+                                                    </div>
+                                                </OutsideClickHandler> :
+                                                <i className="fa-solid fa-magnifying-glass" onClick={() => { setToggle(true) }}></i>}
                                         </li>
 
                                         <li>
-                                            <label>LN</label>
+                                            <label>Language</label>
                                             <select id="languages" name="languages">
-                                                <option value="english">EN</option>
+                                                <option defaultChecked value="english">EN</option>
                                                 <option value="arabic">AR</option>
                                             </select>
                                         </li>
@@ -137,7 +141,7 @@ const Navbar = () => {
                                     <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">Products</a></li>
                                     <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">Services</a></li>
                                     <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="/contact">Contact Us</a></li>
-                                    <li onClick={() => { setIsActive(!isActive); setSideBar(true)}}><a className="underlineHover" href="#">Sign in</a></li>
+                                    <li onClick={() => { setIsActive(!isActive); setSideBar(true) }}><a className="underlineHover" href="#">Sign in</a></li>
                                     <li>
                                         <label>LN</label>
                                         <select id="languages" name="languages">

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Nanum+Gothic:wght@400;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 html,
 body {
   padding: 0;
@@ -25,7 +26,7 @@ a {
 .navbar {
   top: 0px;
   width: 100%;
-  position: fixed;
+  position: absolute;
 }
 
 #mainNavbar {
@@ -36,12 +37,17 @@ a {
   display: flex;
   align-items: center;
   cursor: pointer;
-  color: white;
+  color: #4b4a4c;
   height: 120px;
   padding: 15px;
   font-size: 16px;
-  background-color: #161619;
+  background-color: transparent;
   padding: 0 25px;
+
+}
+
+.navbarContainer img {
+  width: 200px;
 }
 
 .navbarComponent {
@@ -52,7 +58,7 @@ a {
 .navbarContainer li {
   display: inline-block;
   padding: 0px 15px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .navbarContainer ul {
@@ -77,10 +83,22 @@ a {
 
 .navbarContainer li select {
   background-color: transparent;
+  color: #4b4a4c;
+  border: none;
 }
 
+
 .navbarContainer li option {
-  background-color: black
+  background-color: white;
+  color: #4b4a4c;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.openSearchBar i {
+  border-bottom: 1px #4b4a4c solid;
+  padding: 6px 0px;
+  font-size: 15px;
 }
 
 .cart {
@@ -90,25 +108,25 @@ a {
 .cart p {
   display: inline-block;
   margin: 0px 10px;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   padding: 1px 5px;
   border-radius: 50%;
-  color: black;
+  color: white;
   font-weight: bold;
   font-size: 13px;
 }
 
 .searchBar input {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding: 5px 5px;
   border: none;
-  border-radius: 50px;
+  border-bottom: 1px solid #4b4a4c;
   width: 200px;
   margin: auto;
   cursor: auto;
-  color: black;
+  color: #4b4a4c;
   text-indent: 15px;
-
+  outline: none;
 }
 
 .underlineHover {
@@ -123,7 +141,7 @@ a {
   display: block;
   margin-top: 5px;
   right: 0;
-  background: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
   transition: width .3s ease;
   -webkit-transition: width .3s ease;
 }
@@ -131,7 +149,7 @@ a {
 .underlineHover:hover:after {
   width: 100%;
   left: 0;
-  background: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
 }
 
 .openClose {
@@ -238,16 +256,17 @@ a {
   }
 
   .underlineHover:after {
-    background: black;
+    background: #4b4a4c;
   }
 
   .underlineHover:hover:after {
-    background: black;
+    background: #4b4a4c;
   }
 
   .navbarContainer {
     height: 70px;
   }
+
   #mainNavbar {
     margin-bottom: 70px;
   }
@@ -305,6 +324,15 @@ a {
   width: 40vw;
 }
 
+.signInHeader .closeButton {
+  display: flex;
+  cursor: pointer;
+}
+
+.signInHeader .closeButton p {
+  padding: 1.5px 10px;
+  font-size: 14px;
+}
 
 .signInBarContainer .signInHeader {
   display: flex;
@@ -317,10 +345,18 @@ a {
 }
 
 
-.signInBarContainer button {
+.signInBarContainer .signInInput a {
   padding: 15px 0px;
   margin: 15px 0px;
   font-weight: bold;
+  transition: 0.3s;
+  text-align: center;
+  cursor: pointer;
+}
+
+.signInBarContainer .signInInput a:hover {
+  background-color: #2D4798;
+  color: white;
 }
 
 .signInBarContainer a div {
@@ -356,19 +392,20 @@ a {
   border: none;
   border-bottom: 1px solid rgb(65, 65, 65);
   text-indent: 2px;
-  color: black;
+  color: #4b4a4c;
   width: 100%;
 }
 
 .signInBtn {
-  background-color: black;
+  background-color: #4b4a4c;
   border: 1px solid rgb(49, 49, 49);
+  color: white;
 }
 
 .signUpBtn {
   background-color: white;
-  color: black;
-  border: 1px solid black;
+  color: #4b4a4c;
+  border: 1px solid #4b4a4c;
 }
 
 
@@ -386,7 +423,7 @@ a {
 
 .lostPass span {
   padding-bottom: 5px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #4b4a4c;
 }
 
 
@@ -396,7 +433,7 @@ a {
 
 .floating-label-group .floating-label {
   font-size: 13px;
-  color: #343434;
+  color: #2b2b2b;
   font-weight: 500;
   position: absolute;
   pointer-events: none;
@@ -414,7 +451,8 @@ a {
   left: 0px;
   opacity: 1;
   padding-top: 15px;
-  color: #858585;
+  color: #4b4a4c;
+  font-size: 12px;
 }
 
 .floating-label-group input {
@@ -488,7 +526,7 @@ a {
   bottom: 0;
   width: 100%;
   background-color: rgb(255, 255, 255);
-  color: black;
+  color: #4b4a4c;
   text-align: center;
   box-shadow: 20px 20px 35px rgba(0, 0, 0, 0.5);
   padding: 0 25px;
@@ -547,6 +585,7 @@ a {
   width: 90%;
   margin: auto;
   padding-top: 15px;
+  font-size: 15px;
 }
 
 .footerEmailSection input {
@@ -556,7 +595,7 @@ a {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid rgb(143, 143, 143);
-  color: black;
+  color: #4b4a4c;
   font-weight: 500;
 }
 
@@ -565,7 +604,7 @@ a {
   font-size: 16px;
   background-color: white;
   border: none;
-  color: black;
+  color: #4b4a4c;
   border-bottom: 1px solid rgb(143, 143, 143);
   font-weight: bold;
 }
@@ -601,28 +640,29 @@ a {
 /*FAQ Section*/
 
 .faqHeaderItem {
-  color: white;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.faqHeader h1{
+.faqHeader h1 {
   font-size: 80px;
   margin-bottom: 30px;
-
+  color: white;
 }
-.faqHeader p{
+
+.faqHeader p {
   font-size: 24px;
   width: 70%;
+  color: white;
 }
 
 .faqHeader {
   height: 480px;
   padding: 0;
   margin: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0)),url("https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/08/faq-page-header.jpg?fit=1920%2C600&ssl=1");
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/08/faq-page-header.jpg?fit=1920%2C600&ssl=1");
   display: flex;
   background-position: top;
   background-size: cover;
@@ -633,127 +673,153 @@ a {
   width: 100%;
   z-index: -1;
 }
-.faqBody{
+
+.faqBody {
   width: 80%;
   margin: auto;
   margin-top: 25px;
   padding: 20px;
-  
+
 }
 
-.faqBodyContainer{
+.faqBodyContainer {
   display: flex;
   justify-content: space-between;
 }
+
 .faqBody .faqBodyContainer span:before {
   content: '—';
   font-size: 30px;
 }
-.faqBody .faqBodyContainer span{
+
+.faqBody .faqBodyContainer span {
   flex: 1;
   padding-top: 30px;
 }
-.faqBodySpacing{
+
+.faqBodySpacing {
   flex: 5;
 }
-.faqBodyContent{
+
+.faqBodyContent {
   display: flex;
 }
-.faqBodyHeader{
+
+.faqBodyHeader {
   flex: 4;
 }
-.faqBodyContent i{
-  flex : 1;
+
+.faqBodyContent i {
+  flex: 1;
   text-align: right;
   margin: auto;
   font-size: 25px;
 }
-.faqBodyHeader h3{
+
+.faqBodyHeader h3 {
   padding: 5px 0px;
   font-size: 24px;
   line-height: 1.5em;
-  color: #343434;
+  color: #4b4a4c;
 }
-.faqBodySpacing h1{
+
+.faqBodySpacing h1 {
+  color: #4b4a4c;
   margin-bottom: 10px;
   font-size: 40px;
 }
-.faqBodySpacing p{
+
+.faqBodySpacing p {
   transition: 0.5s;
   line-height: 1.7em;
-  color: #2b2b2b;
+  color: #4b4a4c;
   padding-bottom: 20px;
 }
-.faqContainer{
+
+.faqContainer {
   cursor: pointer;
 }
-.faqBodyHeader{  
+
+.faqBodyHeader {
   border-bottom: #cbcbcb 1px solid;
 }
 
 @media(max-width: 1150px) {
-  .faqHeader p{
+  .faqHeader p {
     width: 80%;
   }
-  .faqBody{
+
+  .faqBody {
     width: 95%;
     margin: auto;
     margin-top: 10px;
     padding: 20px;
-    
+
   }
+
   .faqHeader {
     height: 550px;
   }
-  .faqBodyContainer{
+
+  .faqBodyContainer {
     display: flex;
     justify-content: space-between;
   }
-  .faqHeader h1{
+
+  .faqHeader h1 {
     padding-top: 10px;
   }
 
 }
+
 @media(max-width: 450px) {
-  .faqHeader p{
+  .faqHeader p {
     font-size: 20px;
     width: 90%;
   }
-  .faqHeader h1{
+
+  .faqHeader h1 {
     font-size: 50px;
     padding-top: 60px;
   }
-  .faqBodyHeader h3{
+
+  .faqBodyHeader h3 {
     padding: 5px 0px;
     font-size: 20px;
     line-height: 1.5em;
     color: #343434;
   }
-  .faqBodySpacing h1{
+
+  .faqBodySpacing h1 {
     margin-bottom: 10px;
     font-size: 30px;
   }
-  .faqBodySpacing p{
+
+  .faqBodySpacing p {
     transition: 0.5s;
     line-height: 1.7em;
     color: #2b2b2b;
     padding-bottom: 20px;
   }
-  .faqBodySpacing i{
+
+  .faqBodySpacing i {
     font-size: 20px;
   }
+
   .faqBody .faqBodyContainer span:before {
     font-size: 20px;
   }
-  .faqBody .faqBodyContainer span{
+
+  .faqBody .faqBodyContainer span {
     flex: 1;
     padding-top: 25px;
   }
 
 }
+
 /* Contact-us section */
 
-.contact-main{
+.contact-main {
   height: 100vh;
   width: 100%;
   left: 0;
@@ -761,12 +827,12 @@ a {
   border: 1px solid rgb(143, 143, 143);
 }
 
-.page-titles{
+.page-titles {
   margin: 0px 19.5px;
   display: flex;
   flex-direction: column;
 
-  
+
   width: 96%;
   align-items: center;
   justify-content: center;
@@ -774,32 +840,28 @@ a {
 
   height: 200px;
   margin-bottom: 80px;
-  
+
 
 }
-.entry-titles{
+
+.entry-titles {
   font-size: 70px;
   padding-bottom: 35px;
   font-weight: 70px;
 }
 
-.upper-text-con{
+.upper-text-con {
   padding-left: 60px;
 }
-.entry-subtitles{
+
+.entry-subtitles {
   font-size: 24px;
   line-height: 35px;
   letter-spacing: 1.7px;
 }
 
-.map-s{
+.map-s {
   width: 100%;
-  
   height: 40%;
-  cursor:grab;
+  cursor: grab;
 }
-
-
-
-
-

@@ -25,7 +25,7 @@ const Footer = () => {
                         <p><span><Link href="#">Privacy Policy</Link></span><span><Link href="/faq">FAQ's</Link></span><span><Link href="/contact">Contact Us</Link></span></p>
                     </div>
                     <div className="footerFlex right">
-                        <p><Link href="https://www.linkedin.com/in/valenceadvancedmaterials/"><i class="fa-brands fa-linkedin-in"></i></Link></p>
+                        <p><Link href="https://www.linkedin.com/in/valenceadvancedmaterials/"><i clasName="fa-brands fa-linkedin-in"></i></Link></p>
                     </div>
 
                 </div>

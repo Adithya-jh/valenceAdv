@@ -12,7 +12,7 @@ const FAQ = () => {
         questionThree: true,
     });
 
-    
+
     return (
         <div className="faqPage">
             <Navbar />
@@ -34,7 +34,8 @@ const FAQ = () => {
                                     <h3 onClick={() => { setShopping({...shopping, questionOne:true })}}>
                                         Aenean commodo dictum odio sit amet cursus. Inteet. Duis metus magna, feugiat vel ullamcorper ac?
                                     </h3>
-                                    {shopping.questionOne &&
+                                    {
+                                    shopping.questionOne &&
                                         <motion.div
                                             initial={{ opacity: 0, scale: 0.5 }}
                                             animate={{ opacity: 1, scale: 1 }}

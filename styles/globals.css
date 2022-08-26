@@ -386,7 +386,6 @@ a {
   margin-top: 4vh;
   padding: 50px;
 }
-
 .signInHeader p {
   margin: 0;
   font-weight: bold;
@@ -400,10 +399,17 @@ a {
 .signInBarContainer input {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid rgb(65, 65, 65);
+  border-bottom: 2px solid rgb(154, 154, 154);
   text-indent: 2px;
   color: #4b4a4c;
   width: 100%;
+}
+.signInBarContainer input:hover{
+  border-bottom: 2px solid rgb(37, 37, 37);
+}
+.signInBarContainer input:focus{
+  outline: none;
+  border-bottom: 2px solid rgb(37, 37, 37);
 }
 
 .signInBtn {
@@ -836,6 +842,8 @@ a {
   width: 100%;
   left: 0;
   top: 0;
+  color: #4b4a4c;
+  overflow-y: hidden;
 }
 
 .page-titles {
@@ -878,6 +886,11 @@ a {
   z-index: -2;
 }
 
+.getInTouchBody{
+  position: relative;
+  z-index: -2;
+}
+
 .contactMainContainer h1{
   margin: 50px 0px;
 }
@@ -891,6 +904,9 @@ a {
 }
 .contactMainTable{
   height: 30vh;
+}
+.contactMainTable td i{
+  color: #4b4a4c;
 }
 .contactMainTable .contactTableHeading{
   padding: 0px 80px 0px 0px;
@@ -906,3 +922,97 @@ a {
 .mainAddress h4{
   margin: 7px 0px;
 }
+
+.getInTouchSection{
+  margin-top: 80px;
+}
+.contactSubTable td p{
+  color: #6f6f6f;
+}
+.contactSubTable td h5{
+  color: #4f4f4f;
+}
+
+.contact-input-pair{
+  display: flex;
+  justify-content: space-between;
+}
+
+.floating-label-group-space{
+  margin: 0px 50px;
+}
+
+.contact-input-pair .floating-label-group{
+  width: 100%;
+}
+
+.getInTouchSectionContainer input, .getInTouchSectionContainer textarea{
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(154, 154, 154);
+  text-indent: 2px;
+  color: #4b4a4c;
+  width: 100%;
+  font-size: 16px;
+}
+.getInTouchSectionContainer input:hover{
+  border-bottom: 2px solid rgb(37, 37, 37);
+}
+.getInTouchSectionContainer input:focus{
+  outline: none;
+  border-bottom: 2px solid rgb(37, 37, 37);
+}
+.getInTouchSectionContainer textarea:focus{
+  border: 2px solid rgb(37, 37, 37);
+  border-radius: 0px;
+}
+.getInTouchSectionContainer textarea{
+  height: 250px;
+  border: 2px solid rgb(154, 154, 154);
+}
+
+
+.getInTouchSectionContainer .floating-label-group .floating-label {  
+  font-size: 16px;
+}
+
+.getInTouchSectionContainer .floating-label-group input:focus~.floating-label,
+.getInTouchSectionContainer.floating-label-group input:not(:focus):valid~.floating-label{  
+  font-size: 14px;
+}
+
+.getInTouchSectionContainer .floating-label-group input {
+  padding: 7px 0px;
+}
+
+@media(max-width: 550px) {
+  .entry-titles{
+    font-size: 40px;
+  }
+  .entry-subtitles p{
+    font-size: 20px;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  .page-titles{
+    width: 100%;
+  }
+  .contactMainContainer h1{
+    font-size: 26px;
+  }
+  .contactMainContainer table h4{
+    font-size: 14px;
+  }
+  .contactMainTable .contactTableHeading{
+    padding: 0px 40px 0px 0px;
+  }
+  .contactMainTable .contactTableSubHeading{
+    padding: 0px 20px 0px 0px;
+  }
+  .floating-label-group-space{
+    margin: 0px 15px;
+  }
+  
+
+}
+

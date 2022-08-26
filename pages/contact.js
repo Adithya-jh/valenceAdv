@@ -32,7 +32,7 @@ function contact() {
                                     <table className='contactSubTable'>
                                         <tbody>
                                             <tr>
-                                                <td className='contactTableSubHeading'><h5>ADDRESS</h5></td>
+                                                <td className='contactTableSubHeading' valign="top"><h5>ADDRESS</h5></td>
                                                 <td><p>9606 North MoPac Expressway Suite 700 Austin, TX 78759</p></td>
                                             </tr>
                                             <tr>
@@ -68,8 +68,26 @@ function contact() {
                     <div className='getInTouchSection'>
                         <div className='getInTouchSectionContainer'>
                             <h1>Get In Touch</h1>
-                            <div>
-                                {/*<input placeholder='name'></input>*/}
+                            <div className='getInTouchBody'>
+                                <div className='contact-input-pair'>
+                                    <div className="floating-label-group">
+                                        <input type="text" className="form-control" autoComplete="off" autoFocus required />
+                                        <label className="floating-label">Name</label>
+                                    </div>
+                                    <div className="floating-label-group-space">
+                                    </div>
+                                    <div className="floating-label-group">
+                                        <input type="password" className="form-control" autoComplete="off" required />
+                                        <label className="floating-label">Email</label>
+                                    </div>
+                                </div>
+                                <div className="floating-label-group">
+                                    <input type="text" className="form-control" autoComplete="off" required />
+                                    <label className="floating-label">Subject</label>
+                                </div>
+                                <div className="floating-label-group">
+                                    <textarea cols="50" type="text" autoComplete="off" placeholder="Message" required />
+                                </div>
                             </div>
                         </div>
                     </div>

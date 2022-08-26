@@ -143,7 +143,7 @@ const Navbar = () => {
                                             </OutsideClickHandler> :
                                             <i className="fa-solid fa-magnifying-glass" onClick={() => { setToggle(true) }}></i>}
                                         </li>*/}
-                                    <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">Home</a></li>
+                                    <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="/">Home</a></li>
                                     <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">About Us</a></li>
                                     <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">Products</a></li>
                                     <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">Services</a></li>

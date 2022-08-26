@@ -45,7 +45,7 @@ const FAQ = () => {
                                             </p>
                                         </motion.div>}
                                 </div>
-                                {shopping.questionOne ? <i class="fa-solid fa-xmark" onClick={() => { setShopping({...shopping, questionOne:false }) }}></i> : <i></i>}
+                                {shopping.questionOne ? <i className="fa-solid fa-xmark" onClick={() => { setShopping({...shopping, questionOne:false }) }}></i> : <i></i>}
                             </div>
 
                             <div className="faqBodyContent">
@@ -63,7 +63,7 @@ const FAQ = () => {
                                             </p>
                                         </motion.div>}
                                 </div>
-                                {shopping.questionTwo ? <i class="fa-solid fa-xmark" onClick={() => { setShopping({...shopping, questionTwo:false }) }}></i> : <i></i>}
+                                {shopping.questionTwo ? <i className="fa-solid fa-xmark" onClick={() => { setShopping({...shopping, questionTwo:false }) }}></i> : <i></i>}
                             </div>
 
                             

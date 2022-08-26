@@ -325,6 +325,7 @@ a {
 #mainNavbar {
   transition: margin-left .5s;
   padding: 0;
+  z-index: 20;
 }
 
 
@@ -837,6 +838,7 @@ a {
   left: 0;
   top: 0;
   border: 1px solid rgb(143, 143, 143);
+  overflow-x: hidden;
 }
 
 .page-titles {
@@ -848,18 +850,18 @@ a {
   width: 96%;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 40px;
 
   height: 200px;
-  margin-bottom: 120px;
+  margin-bottom: 150px;
 
 
 }
 
 .entry-titles {
-  font-size: 70px;
+  font-size: 65px;
   padding-bottom: 35px;
-  font-weight: 70px;
+  font-weight: 5px;
   margin-top: 160px;
 }
 
@@ -871,14 +873,70 @@ a {
   font-size: 24px;
   line-height: 35px;
   letter-spacing: 1.7px;
+  /* margin-bottom: 40px; */
 }
 
 .map-s {
   width: 100%;
   height: 40%;
   cursor: grab;
+  z-index: -2;
+  margin-top: 20px;
 }
 
 .con-info{
-  margin-top: 50px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-size: 20px;
+  color: #161619;
+  width: 100%;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* flex-direction: column; */
+
+}
+
+.con-addr{
+  display: flex;
+  flex-direction: row;
+  font-size:15px;
+  margin-left: 300px;
+  width: 100%;
+  
+  /* justify-content: space-around; */
+}
+
+.con-addr2-main{
+  display: flex;
+  flex-direction: column;
+}
+.con-addr3-main{
+  display: flex;
+  flex-direction: column;
+}
+
+.con{
+  margin-left: 80px;
+  font-size: 16px;
+  
+}
+
+.con-addr2{
+  padding-bottom: 20px;
+  font-weight: 35px;
+}
+.con-addr1{
+  /* padding-bottom: 20px; */
+  font-weight: bold;
+}
+.con-addr3{
+  padding-bottom: 20px;
+}
+
+.contact-info{
+  margin-left: 378px;
+  width: 100%;
+  padding-bottom: 35px;
+  /* padding-left: 60px; */
 }

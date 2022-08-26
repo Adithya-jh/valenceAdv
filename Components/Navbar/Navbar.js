@@ -16,24 +16,24 @@ const Navbar = () => {
         <>
             <div>
                 <OutsideClickHandler onOutsideClick={() => { setSideBar(false); setSignUp(false) }}>
-                    <div id={sideBar && "mySidenav"} class="sidenav">
+                    <div id={sideBar && "mySidenav"} className="sidenav">
 
                         <div className="signInBar">
                             <div className="signInBarContainer">
                                 <div className="signInHeader">
                                     {signUp ? <p>Sign up</p> : <p>Sign in</p>}
-                                    <div className="closeButton" onClick={() => { setSideBar(false) }}><p>Close</p> <i class="fa-solid fa-xmark" ></i></div>
+                                    <div className="closeButton" onClick={() => { setSideBar(false) }}><p>Close</p> <i className="fa-solid fa-xmark" ></i></div>
                                 </div>
                                 {!signUp && <div>
                                     <div className="signInInput">
                                         <div>
-                                            <div class="floating-label-group">
-                                                <input type="text" id="username" class="form-control" autoComplete="off" autoFocus required />
-                                                <label class="floating-label">Username</label>
+                                            <div className="floating-label-group">
+                                                <input type="text" id="username" className="form-control" autoComplete="off" autoFocus required />
+                                                <label className="floating-label">Username</label>
                                             </div>
-                                            <div class="floating-label-group">
-                                                <input type="password" id="password" class="form-control" autoComplete="off" required />
-                                                <label class="floating-label">Password</label>
+                                            <div className="floating-label-group">
+                                                <input type="password" id="password" className="form-control" autoComplete="off" required />
+                                                <label className="floating-label">Password</label>
                                             </div>
                                         </div>
                                         <div className="rememberMe">
@@ -51,13 +51,13 @@ const Navbar = () => {
                                 {signUp && <div>
                                     <div className="signInInput">
                                         <div>
-                                            <div class="floating-label-group">
-                                                <input type="text" id="username" class="form-control" autoComplete="off" autoFocus required />
-                                                <label class="floating-label">Username</label>
+                                            <div className="floating-label-group">
+                                                <input type="text" id="username" className="form-control" autoComplete="off" autoFocus required />
+                                                <label className="floating-label">Username</label>
                                             </div>
-                                            <div class="floating-label-group">
-                                                <input type="password" id="password" class="form-control" autoComplete="off" required />
-                                                <label class="floating-label">Password</label>
+                                            <div className="floating-label-group">
+                                                <input type="password" id="password" className="form-control" autoComplete="off" required />
+                                                <label className="floating-label">Password</label>
                                             </div>
                                         </div>
                                         <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy.
@@ -80,7 +80,7 @@ const Navbar = () => {
                         <div className="navbarContainer">
                             <div className="navbarComponent left">
                                 <div className="openClose" onClick={() => { setIsActive(!isActive) }} >
-                                    {isActive ? <i class="fa-solid fa-xmark" ></i> : <i class="fa-solid fa-bars" ></i>}
+                                    {isActive ? <i className="fa-solid fa-xmark" ></i> : <i className="fa-solid fa-bars" ></i>}
                                 </div>
 
                                 <span className="navbarItems">
@@ -121,7 +121,7 @@ const Navbar = () => {
                                     <li className="cart">
 
                                         <a href="#">
-                                            <i class="fa-solid fa-cart-shopping"></i>
+                                            <i className="fa-solid fa-cart-shopping"></i>
                                         </a>
                                         <p className="cartNum"><span>0</span></p>
                                     </li>

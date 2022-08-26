@@ -102,8 +102,8 @@ const Navbar = () => {
                                         <li className="searchBar">
                                             {toggle ?
                                                 <OutsideClickHandler onOutsideClick={() => { setToggle(false) }}>
-                                                    <div className="openSearchBar">
-                                                        <i className="fa-solid fa-magnifying-glass" onClick={() => { setToggle(true) }}></i>
+                                                    <div className="openSearchBar" onClick={() => { setToggle(true) }}>
+                                                        <i className="fa-solid fa-magnifying-glass" ></i>
                                                         <input placeholder="Search" type="text"></input>
                                                     </div>
                                                 </OutsideClickHandler> :
@@ -133,16 +133,16 @@ const Navbar = () => {
                         <div className="mobileNavbar" id={isActive && "mobileNavbarActive"}>
                             <div className="mNavbarContainer">
                                 <ul>
-                                    <li className="searchBar">
-                                        {toggle ?
+                                    {/*<li className="searchBar">
+                                        {isActive && toggle ?
                                             <OutsideClickHandler onOutsideClick={() => { setToggle(false) }}>
-                                                <div className="openSearchBar">
-                                                    <i className="fa-solid fa-magnifying-glass" onClick={() => { setToggle(true) }}></i>
+                                                <div className="openSearchBar" onClick={() => { setToggle(true) }}>
+                                                    <i className="fa-solid fa-magnifying-glass" ></i>
                                                     <input placeholder="Search" type="text"></input>
                                                 </div>
                                             </OutsideClickHandler> :
                                             <i className="fa-solid fa-magnifying-glass" onClick={() => { setToggle(true) }}></i>}
-                                    </li>
+                                        </li>*/}
                                     <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">Home</a></li>
                                     <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">About Us</a></li>
                                     <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">Products</a></li>

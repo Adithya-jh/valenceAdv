@@ -175,6 +175,10 @@ a {
 }
 
 @media(max-width: 1250px) {
+
+  .navbar {
+    position: fixed;
+  }
   .openClose {
     display: inline-block;
     flex: 1;
@@ -183,10 +187,14 @@ a {
   .openClose i {
     font-size: 20px;
   }
+  
 
 
   .navbarItems {
     display: none;
+  }
+  .navbarContainer{
+    background-color: white;
   }
   .navbarContainer img {
     width: 150px;

@@ -3,49 +3,83 @@ import Navbar from '../Components/Navbar/Navbar'
 import Map from './../Components/Map/Map'
 
 function contact() {
-  return (
-    <div className="contact-main">
-        <Navbar/>
-        <div className="page-titles">
-            <div className="entry-titles">
-                Contact Us
-                
-            </div>
+    return (
+        <div className="contact-main">
+            <Navbar />
+            <div className="page-titles">
+                <div className="entry-titles">
+                    Contact Us
 
-            <div className="entry-subtitles">
-                
-               <span className="upper-text-con">Lorem Ipsum, sometimes referred to as 'lipsum',</span> <br/>
-                <span className="inner-text-con"> the placeholder text used in design when creating content. </span>
-
-            </div> 
-        </div>
-        <Map/>
-
-        <div className="con-info">
-            <h2 className="contact-info">Contact Information</h2>
-            <div className="con-addr">
-                <div className="con-addr1 con ">BANGALORE OFFICE</div>
-                <div className="con-addr2-main con cond">
-                    <div className="con-addr2">ADDRESS</div>
-                    <div className="con-addr2">PHONE</div>
-                    <div className="con-addr2">EMAIL</div>
                 </div>
-                <div className="con-addr3-main con cond">
-                    <div className="con-addr3">9606 North MoPac Expressway Suite 700 Austin, TX 78759</div>
-                    <div className="con-addr3">+1 248-785-8545</div>
-                    <div className="con-addr3">vamlindia@gmail.com</div>
+
+                <div className="entry-subtitles">
+
+                    <p>Suspendisse eget mi eget felis egestas tristique at sit amet libero. Donec lacinia dapibus ante sed fringilla. Sed est mauris, maximus eu varius id, tincidunt vitae mauris.</p>
+
                 </div>
             </div>
 
-            {/* <div className="">
+            <Map />
 
-            </div> */}s
+            <div className='contactInformation'>
+                <div className='contactMainContainer'>
+                    <h1>Contact Information</h1>
+                    <table className='contactMainTable'>
+                        <tbody>
+                            <tr>
+                                <td valign="top" className='contactTableHeading mainAddress'><h4>BANGALORE OFFICE</h4></td>
+                                <td valign="top">
+                                    <table className='contactSubTable'>
+                                        <tbody>
+                                            <tr>
+                                                <td className='contactTableSubHeading'><h5>ADDRESS</h5></td>
+                                                <td><p>9606 North MoPac Expressway Suite 700 Austin, TX 78759</p></td>
+                                            </tr>
+                                            <tr>
+                                                <td className='contactTableSubHeading'><h5>PHONE</h5></td>
+                                                <td><p>+91 960678759</p></td>
+                                            </tr>
+                                            <tr>
+                                                <td className='contactTableSubHeading'><h5>EMAIL</h5></td>
+                                                <td><p>valence@gmail.com</p></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className='contactTableHeading'>
+                                    <h4>SOCIAL MEDIA</h4>
 
+                                </td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td><i class="fa-brands fa-linkedin-in"></i></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div className='getInTouchSection'>
+                        <div className='getInTouchSectionContainer'>
+                            <h1>Get In Touch</h1>
+                            <div>
+                                {/*<input placeholder='name'></input>*/}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <Footer />
         </div>
-        <Footer/>
-    </div>
- 
-  )
+
+    )
 }
 
 export default contact

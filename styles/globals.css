@@ -57,7 +57,7 @@ a {
 
 .navbarContainer li {
   display: inline-block;
-  padding: 0px 15px;
+  padding: 0px 0px 0px 15px;
   font-weight: 500;
 }
 
@@ -292,7 +292,7 @@ a {
     .navbarComponent.right {
       align-items: flex-end;
     }
-
+    
   }
 
 
@@ -1004,13 +1004,16 @@ a {
     font-size: 14px;
   }
   .contactMainTable .contactTableHeading{
-    padding: 0px 40px 0px 0px;
+    padding: 0px 25px 0px 0px;
   }
   .contactMainTable .contactTableSubHeading{
-    padding: 0px 20px 0px 0px;
+    padding: 0px 15px 0px 0px;
   }
   .floating-label-group-space{
     margin: 0px 15px;
+  }
+  .contactMainContainer{
+    padding: 15px;
   }
   
 

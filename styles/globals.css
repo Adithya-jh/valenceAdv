@@ -43,7 +43,6 @@ a {
   font-size: 16px;
   background-color: transparent;
   padding: 0 25px;
-
 }
 
 .navbarContainer img {
@@ -59,18 +58,40 @@ a {
   display: inline-block;
   padding: 0px 0px 0px 15px;
   font-weight: 500;
+  height: 100%;
+
 }
 
 .navbarContainer ul {
   padding-left: 0px;
+  display: flex;
+  height: 100%;
+  align-items: center;
 }
+
 
 .navbarComponent.right {
   justify-content: flex-end;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.navbarComponent .navbarItems {
+  height: 100%;
+  align-items: center;
+  display: flex;
 }
 
 .navbarComponent.left {
   justify-content: flex-start;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+li.languageHover {
+  padding-left: 0;
 }
 
 .navbarContainer h1 {
@@ -108,7 +129,7 @@ a {
 .cart p {
   display: inline-block;
   margin: 0px 10px;
-  background-color: rgb(0, 0, 0);
+  background-color: #4b4a4c;
   padding: 1px 5px;
   border-radius: 50%;
   color: white;
@@ -152,6 +173,18 @@ a {
   background: rgb(0, 0, 0);
 }
 
+.navbarItems li:hover .underlineHover:after {
+  width: 100%;
+  left: 0;
+  background: rgb(0, 0, 0);
+}
+
+.navbarItems li {
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+
 .openClose {
   display: none;
 }
@@ -179,6 +212,7 @@ a {
   .navbar {
     position: fixed;
   }
+
   .openClose {
     display: inline-block;
     flex: 1;
@@ -187,15 +221,16 @@ a {
   .openClose i {
     font-size: 20px;
   }
-  
 
 
-  .navbarItems {
+  .navbarItems li {
     display: none;
   }
-  .navbarContainer{
+
+  .navbarContainer {
     background-color: white;
   }
+
   .navbarContainer img {
     width: 150px;
   }
@@ -244,7 +279,7 @@ a {
     font-size: 16px;
     font-weight: 500;
   }
-  
+
 
   .mNavbarContainer li label {
     padding-right: 15px;
@@ -292,7 +327,7 @@ a {
     .navbarComponent.right {
       align-items: flex-end;
     }
-    
+
   }
 
 
@@ -386,6 +421,7 @@ a {
   margin-top: 4vh;
   padding: 50px;
 }
+
 .signInHeader p {
   margin: 0;
   font-weight: bold;
@@ -404,10 +440,12 @@ a {
   color: #4b4a4c;
   width: 100%;
 }
-.signInBarContainer input:hover{
+
+.signInBarContainer input:hover {
   border-bottom: 2px solid rgb(37, 37, 37);
 }
-.signInBarContainer input:focus{
+
+.signInBarContainer input:focus {
   outline: none;
   border-bottom: 2px solid rgb(37, 37, 37);
 }
@@ -649,7 +687,8 @@ a {
     flex-direction: column;
     align-items: center;
   }
-  .footerFlex.left{
+
+  .footerFlex.left {
     text-align: center;
   }
 
@@ -663,18 +702,28 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
 }
 
 .faqHeader h1 {
   font-size: 80px;
-  margin-bottom: 30px;
   color: white;
+  height: 50%;
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+  padding-bottom: 10px;
 }
 
 .faqHeader p {
   font-size: 24px;
   width: 70%;
   color: white;
+  height: 50%;
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  padding-top: 10px;
 }
 
 .faqHeader {
@@ -786,7 +835,7 @@ a {
   }
 
   .faqHeader h1 {
-    padding-top: 10px;
+    font-size: 50px;
   }
 
 }
@@ -838,12 +887,11 @@ a {
 
 /* Contact-us section */
 
-.contact-main {  
+.contact-main {
   width: 100%;
   left: 0;
   top: 0;
   color: #4b4a4c;
-  overflow-y: hidden;
 }
 
 .page-titles {
@@ -878,23 +926,24 @@ a {
   line-height: 35px;
   letter-spacing: 1.2px;
 }
-.mapboxgl-ctrl, .mapboxgl-ctrl-attrib, .mapboxgl-compact{
+
+.mapboxgl-ctrl,
+.mapboxgl-ctrl-attrib,
+.mapboxgl-compact {
   display: none;
 }
-.mapboxgl-canvas{
+
+.mapboxgl-canvas {
   position: relative;
   z-index: -2;
 }
 
-.getInTouchBody{
-  position: relative;
-  z-index: -2;
-}
 
-.contactMainContainer h1{
+.contactMainContainer h1 {
   margin: 50px 0px;
 }
-.contactInformation{
+
+.contactInformation {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -902,51 +951,65 @@ a {
   align-items: center;
   padding: 30px;
 }
-.contactMainTable{
+
+.contactMainTable {
   height: 30vh;
 }
-.contactMainTable td i{
+
+.contactMainTable td i {
   color: #4b4a4c;
 }
-.contactMainTable .contactTableHeading{
+
+.contactMainTable .contactTableHeading {
   padding: 0px 80px 0px 0px;
 }
-.contactMainTable .contactTableSubHeading{
+
+.contactMainTable .contactTableSubHeading {
   padding: 0px 40px 0px 0px;
 }
-.contactSubTable td h5, .contactSubTable td p{
+
+.contactSubTable td h5 {
   margin: 5px 0px;
 }
 
+.contactSubTable td p a {
+  line-height: 25px;
+}
 
-.mainAddress h4{
+.mainAddress h4 {
   margin: 7px 0px;
 }
 
-.getInTouchSection{
+.getInTouchSection {
   margin-top: 80px;
 }
-.contactSubTable td p{
+
+.contactSubTable td p {
   color: #6f6f6f;
+  margin: 0;
+  padding-bottom: 15px;
+  font-size: 15px;
 }
-.contactSubTable td h5{
+
+.contactSubTable td h5 {
   color: #4f4f4f;
 }
 
-.contact-input-pair{
+.contact-input-pair {
   display: flex;
   justify-content: space-between;
 }
 
-.floating-label-group-space{
+.floating-label-group-space {
   margin: 0px 50px;
 }
 
-.contact-input-pair .floating-label-group{
+.contact-input-pair .floating-label-group {
   width: 100%;
 }
 
-.getInTouchSectionContainer input, .getInTouchSectionContainer textarea{
+.getInTouchSectionContainer input,
+.getInTouchSectionContainer textarea {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid rgb(154, 154, 154);
@@ -955,29 +1018,33 @@ a {
   width: 100%;
   font-size: 16px;
 }
-.getInTouchSectionContainer input:hover{
+
+.getInTouchSectionContainer input:hover {
   border-bottom: 2px solid rgb(37, 37, 37);
 }
-.getInTouchSectionContainer input:focus{
+
+.getInTouchSectionContainer input:focus {
   outline: none;
   border-bottom: 2px solid rgb(37, 37, 37);
 }
-.getInTouchSectionContainer textarea:focus{
-  border: 2px solid rgb(37, 37, 37);
-  border-radius: 0px;
+
+.getInTouchSectionContainer textarea:focus {
+  outline: none;
+  border-bottom: 2px solid rgb(37, 37, 37);
 }
-.getInTouchSectionContainer textarea{
-  height: 250px;
-  border: 2px solid rgb(154, 154, 154);
+
+.getInTouchSectionContainer textarea {
+  height: 200px;
+  margin-bottom: 50px;
 }
 
 
-.getInTouchSectionContainer .floating-label-group .floating-label {  
+.getInTouchSectionContainer .floating-label-group .floating-label {
   font-size: 16px;
 }
 
 .getInTouchSectionContainer .floating-label-group input:focus~.floating-label,
-.getInTouchSectionContainer.floating-label-group input:not(:focus):valid~.floating-label{  
+.getInTouchSectionContainer.floating-label-group input:not(:focus):valid~.floating-label {
   font-size: 14px;
 }
 
@@ -985,37 +1052,384 @@ a {
   padding: 7px 0px;
 }
 
+
+.floating-label-group-button button {
+  width: 100%;
+  padding: 18px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 150px;
+  transition: 0.5s;
+  border: none;
+}
+
+.floating-label-group-button button:hover {
+  background-color: #2D4798;
+}
+
 @media(max-width: 550px) {
-  .entry-titles{
+  .entry-titles {
     font-size: 40px;
   }
-  .entry-subtitles p{
+
+  .entry-subtitles p {
     font-size: 20px;
     line-height: normal;
     letter-spacing: normal;
   }
-  .page-titles{
+
+  .page-titles {
     width: 100%;
   }
-  .contactMainContainer h1{
+
+  .contactMainContainer h1 {
     font-size: 26px;
   }
-  .contactMainContainer table h4{
+
+  .contactMainContainer table h4 {
     font-size: 14px;
   }
-  .contactMainTable .contactTableHeading{
+
+  .contactMainTable .contactTableHeading {
     padding: 0px 25px 0px 0px;
   }
-  .contactMainTable .contactTableSubHeading{
+
+  .contactMainTable .contactTableSubHeading {
     padding: 0px 15px 0px 0px;
   }
-  .floating-label-group-space{
+
+  .floating-label-group-space {
     margin: 0px 15px;
   }
-  .contactMainContainer{
+
+  .contactMainContainer {
     padding: 15px;
   }
-  
 
+
+}
+
+/*Drop Down*/
+
+.languageDropbtn {
+  color: #4b4a4c;
+  font-size: 15px;
+  border: none;
+  background-color: transparent;
+}
+
+.languageDropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.dropdownContent a {
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+}
+
+.dropdownContent a:hover {
+  background-color: #ddd;
+}
+
+.languageHover:hover .dropdownContent {
+  display: block;
+}
+
+
+.languageDropbtn span {
+  font-weight: 600;
+}
+
+/*DROP DOWN NAVBAR*/
+
+.dropbtn {
+  color: #4b4a4c;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+}
+
+.mainLiHover:hover .dropdown-content {
+  display: block;
+}
+
+
+.dropdown .dropdown-content a span {
+  position: relative;
+}
+
+.dropdown .dropdown-content a span:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #4b4a4c;
+  transition: width .3s ease;
+  -webkit-transition: width .3s ease;
+}
+
+.dropdown .dropdown-content a span:hover:after {
+  width: 100%;
+  left: 0;
+  background: #4b4a4c;
+}
+
+
+/*FORGOT PASSWORD*/
+
+.forgotPasswordContainer {
+  margin: 50px;
+  padding-top: 20px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.forgotPasswordContainer * {
+  color: #4b4a4c;
+}
+
+.forgotPasswordContainer h1 {
+  font-size: 60px;
+  margin-bottom: 70px;
+}
+
+.forgotPasswordContainer p {
+  width: 25%;
+  text-align: justify;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.forgotPasswordContainer .floating-label-group input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #4b4a4c;
+  width: 100%;
+  color: #4b4a4c;
+  font-size: 16px;
+}
+
+.forgotPasswordContainer .floating-label-group {
+  width: 25%;
+  margin-top: 15px;
+}
+
+.forgotPasswordContainer a {
+  width: 25%;
+  background: #4b4a4c;
+  padding: 20px 50px;
+  color: white;
+  text-align: center;
+  margin: 50px 0px;
+  margin-bottom: 60px;
+  transition: 0.3s;
+
+}
+
+.forgotPasswordContainer a:hover {
+  background-color: #2D4798;
+}
+
+@media(max-width: 1150px) {
+  .forgotPasswordContainer h1 {
+    font-size: 50px;
+    margin-bottom: 35px;
+  }
+
+  .forgotPasswordContainer p {
+    width: 70%;
+  }
+
+  .forgotPasswordContainer .floating-label-group {
+    width: 70%;
+    margin-top: 15px
+  }
+
+  .forgotPasswordContainer a {
+    width: 70%;
+  }
+}
+@media(max-width: 450px) {
+  .forgotPasswordContainer h1 {
+    font-size: 36px;
+    margin-bottom: 35px;
+  }
+
+  .forgotPasswordContainer p {
+    width: 90%;
+  }
+
+  .forgotPasswordContainer .floating-label-group {
+    width: 90%;
+    margin-top: 15px
+  }
+
+  .forgotPasswordContainer a {
+    width: 90%;
+  }
+}
+
+/*ABOUT US SECTION*/
+
+.about-us-main {
+  width: 100%;
+  left: 0;
+  top: 0;
+  color: #4b4a4c;
+}
+.about-us-main .about-us-image{
+  height: 80vh;
+  padding: 0;
+  margin: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/08/about-us-header.jpg?fit=1920%2C800&ssl=1");
+  display: flex;
+  background-position: top;
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  top: 0px;
+  width: 100%;
+  z-index: -1;
+}
+
+.aboutUsInformation{
+  width: 50%;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.aboutUsMainContainer h1{
+  font-size: 36px;
+  margin-bottom: 45px;
+}
+.aboutUsMainContainer h3{
+  font-size: 22px;
+  line-height: 33px;
+  margin-bottom: 35px;
+}
+.aboutUsMainContainer p{
+  font-size: 16px;
+  line-height: 28px;
+}
+.aboutUsVM{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0px;
+}
+.aboutUsVM p{
+  flex: 2;
+  margin: 0;
+}
+.aboutUsVM h4{
+  flex: 1;
+  font-size: 22px;
+  margin: 0;
+}
+.aboutUsMainBody{
+  margin-top: 70px;
+}
+
+.about-us-features{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  margin-bottom: 50px;
+}
+.about-us-features-container{
+  flex: 1;
+  margin: 50px;
+}
+.about-us-features h3{
+  margin: 30px 0px;
+  font-size: 22px;
+}
+.about-us-features p{
+  line-height: 25px;
+  text-align: justify;
+  font-size: 16px;
+}
+
+@media(max-width: 1150px) {
+  .aboutUsInformation{
+    width: 90%;
+    margin-top: 80px;
+    margin-bottom: 60px;
+  }
+  
+  .aboutUsMainContainer h1{
+    margin-bottom: 45px;
+  }
+  .aboutUsMainContainer h3{
+    margin-bottom: 35px;
+  }
+  .aboutUsVM{
+    padding: 15px 0px;
+  }
+  
+  .aboutUsMainBody{
+    margin-top: 50px;
+  }
+  
+  .about-us-features{
+    width: 90%;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .about-us-features-container{
+    margin: 20px 0px;
+  }
+
+  
 }
 

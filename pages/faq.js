@@ -19,8 +19,8 @@ const FAQ = () => {
             <div className="faqContainer">
                 <div className="faqHeader">
                     <div className="faqHeaderItem">
-                        <h1>FAQ</h1>
-                        <p>Aenean commodo dictum odio sit amet cursus. Integer id nunc sit amet ex pharetra aliquet. Duis metus magna, feugiat vel ullamcorper ac, commodo at velit.</p>
+                        <h1>Frequently Asked Questions</h1>
+                        <p>Ask more to get more. However, we have covered all the possible questions about working with Valence that will pop in your mind. Take a look!</p>
                     </div>
                 </div>
                 <div className="faqBody">

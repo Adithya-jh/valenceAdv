@@ -1,6 +1,6 @@
 import { useState } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
-
+import Link from 'next/link'
 
 const Navbar = () => {
 
@@ -8,6 +8,7 @@ const Navbar = () => {
     const [isActive, setIsActive] = useState(false)
     const [sideBar, setSideBar] = useState(false);
     const [signUp, setSignUp] = useState(false);
+    const [language, setLanguage] = useState("EN")
 
 
 
@@ -45,7 +46,7 @@ const Navbar = () => {
                                         <a className="signUpBtn" onClick={() => { setSignUp(true) }}>CREATE AN ACCOUNT</a>
                                     </div>
                                     <div className="lostPass">
-                                        <a><div><span>LOST YOUR PASSWORD ?</span></div></a>
+                                        <a href="/lost-password"><div><span>LOST YOUR PASSWORD ?</span></div></a>
                                     </div>
                                 </div>}
                                 {signUp && <div>
@@ -53,7 +54,7 @@ const Navbar = () => {
                                         <div>
                                             <div className="floating-label-group">
                                                 <input type="text" id="username" className="form-control" autoComplete="off" autoFocus required />
-                                                <label className="floating-label">Username</label>
+                                                <label className="floating-label">Email</label>
                                             </div>
                                             <div className="floating-label-group">
                                                 <input type="password" id="password" className="form-control" autoComplete="off" required />
@@ -86,15 +87,33 @@ const Navbar = () => {
                                 <span className="navbarItems">
                                     <ul>
                                         <li><a className="underlineHover" href="/">Home</a></li>
-                                        <li><a className="underlineHover" href="#">About Us</a></li>
-                                        <li><a className="underlineHover" href="#">Products</a></li>
-                                        <li><a className="underlineHover" href="#">Services</a></li>
+                                        <li><a className="underlineHover" href="/about-us">About Us</a></li>
+                                        <li className="mainLiHover">
+                                            <div class="dropdown">
+                                                <button class="dropbtn"><span className="underlineHover">Products</span></button>
+                                                <div class="dropdown-content">
+                                                    <a href="#" ><span className="dropLinks">Link 1</span></a>
+                                                    <a href="#"><span>Link 1</span></a>
+                                                    <a href="#"><span>Link 1</span></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li className="mainLiHover">
+                                            <div class="dropdown">
+                                                <button class="dropbtn"><span className="underlineHover">Services</span></button>
+                                                <div class="dropdown-content">
+
+                                                    <a href="#"><span>Link 1</span></a>
+                                                    <a href="#"><span>Link 1</span></a>
+                                                    <a href="#"><span>Link 1</span></a>
+                                                </div>
+                                            </div>
+                                        </li>
                                         <li><a className="underlineHover" href="/contact">Contact Us</a></li>
                                     </ul>
                                 </span>
                             </div>
-                            {/*<h1>VALENCE</h1>*/}
-                            <img src={"https://firebasestorage.googleapis.com/v0/b/valence-am.appspot.com/o/Asserts%2Flogo.png?alt=media&token=e093bed7-8127-4c0b-a60a-027546c6f659"}></img>
+                            <Link href="/"><img src={"https://firebasestorage.googleapis.com/v0/b/valence-am.appspot.com/o/Asserts%2Flogo.png?alt=media&token=e093bed7-8127-4c0b-a60a-027546c6f659"} /></Link>
                             <div className="navbarComponent right">
                                 <ul>
                                     <span className="navbarItems">
@@ -109,22 +128,29 @@ const Navbar = () => {
                                                 </OutsideClickHandler> :
                                                 <i className="fa-solid fa-magnifying-glass" onClick={() => { setToggle(true) }}></i>}
                                         </li>
-
                                         <li>
                                             <label>Language</label>
-                                            <select id="languages" name="languages">
-                                                <option defaultChecked value="english">EN</option>
-                                                <option value="arabic">AR</option>
-                                            </select>
+                                        </li>
+
+                                        <li className="languageHover">
+
+                                            <div class="languageDropdown">
+                                                <button class="languageDropbtn"><span className="underlineHover">{language} </span><i class="fa-solid fa-angle-down"></i></button>
+                                                <div class="dropdownContent">
+                                                    <a onClick={() => { setLanguage("EN") }}>EN</a>
+                                                    <a onClick={() => { setLanguage("AR") }}>AR</a>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li className="cart">
+
+                                            <a href="#">
+                                                <i className="fa-solid fa-cart-shopping"></i>
+                                            </a>
+                                            <p className="cartNum"><span>0</span></p>
                                         </li>
                                     </span>
-                                    <li className="cart">
-
-                                        <a href="#">
-                                            <i className="fa-solid fa-cart-shopping"></i>
-                                        </a>
-                                        <p className="cartNum"><span>0</span></p>
-                                    </li>
 
 
                                 </ul>
@@ -133,16 +159,6 @@ const Navbar = () => {
                         <div className="mobileNavbar" id={isActive && "mobileNavbarActive"}>
                             <div className="mNavbarContainer">
                                 <ul>
-                                    {/*<li className="searchBar">
-                                        {isActive && toggle ?
-                                            <OutsideClickHandler onOutsideClick={() => { setToggle(false) }}>
-                                                <div className="openSearchBar" onClick={() => { setToggle(true) }}>
-                                                    <i className="fa-solid fa-magnifying-glass" ></i>
-                                                    <input placeholder="Search" type="text"></input>
-                                                </div>
-                                            </OutsideClickHandler> :
-                                            <i className="fa-solid fa-magnifying-glass" onClick={() => { setToggle(true) }}></i>}
-                                        </li>*/}
                                     <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="/">Home</a></li>
                                     <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">About Us</a></li>
                                     <li onClick={() => { setIsActive(!isActive) }}><a className="underlineHover" href="#">Products</a></li>

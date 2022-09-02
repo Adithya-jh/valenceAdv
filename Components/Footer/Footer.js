@@ -19,7 +19,7 @@ const Footer = () => {
                 </div>
                 <div className="footerMain">
                     <div className="footerFlex left">
-                        <Link href="/"><p>© {date.getFullYear()} Valence Advanced Materials PVT LTD</p></Link>
+                        <Link href="/"><p>© {date.getFullYear()} Valence Advanced Materials Private Limited</p></Link>
                     </div>
                     <div className="footerFlex">
                         <p><span><Link href="#">Privacy Policy</Link></span><span><Link href="/faq">FAQ's</Link></span><span><Link href="/contact">Contact Us</Link></span></p>

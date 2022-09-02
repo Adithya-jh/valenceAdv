@@ -91,10 +91,16 @@ const Navbar = () => {
                                         <li className="mainLiHover">
                                             <div class="dropdown">
                                                 <button class="dropbtn"><span className="underlineHover">Products</span></button>
-                                                <div class="dropdown-content">
-                                                    <a href="#" ><span className="dropLinks">Link 1</span></a>
-                                                    <a href="#"><span>Link 1</span></a>
-                                                    <a href="#"><span>Link 1</span></a>
+                                                <div class="dropdown-content product">
+                                                    <a href="#"><span>Room temperature to 120 °C</span></a>
+                                                    <a href="#" className="dropNone"><span></span></a>
+                                                    <a href="#"><span>140 °C to 180 °C</span></a>
+                                                    <a href="#" className="dropNone"><span></span></a>
+                                                    <a href="#"><span>190 °C to 204 °C</span></a>
+                                                    <a href="#" className="dropNone"><span></span></a>
+                                                    <a href="#"><span>204 °C to 260 °C</span></a>
+                                                    <a href="#" className="dropNone"><span></span></a>
+                                                    <a href="#"><span>Resin & Vacuum Assisted Infusion</span></a>
                                                 </div>
                                             </div>
                                         </li>
@@ -102,10 +108,7 @@ const Navbar = () => {
                                             <div class="dropdown">
                                                 <button class="dropbtn"><span className="underlineHover">Services</span></button>
                                                 <div class="dropdown-content">
-
-                                                    <a href="#"><span>Link 1</span></a>
-                                                    <a href="#"><span>Link 1</span></a>
-                                                    <a href="#"><span>Link 1</span></a>
+                                                    <a href="#"><span>Val Ad</span></a>
                                                 </div>
                                             </div>
                                         </li>

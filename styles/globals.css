@@ -1512,7 +1512,7 @@ a.dropNone{
         text-overflow: ellipsis;
         transform: translate(0, 2.125rem) scale(1.5);
       }
-      ::-webkit-input-placeholder{
+      .textAreaContactSection ::-webkit-input-placeholder{
         opacity: 0;
         transition: inherit;
       }

@@ -1502,7 +1502,7 @@ a.dropNone{
       }
       
       .textAreaContactSection label {
-        font-size: 12px;
+        font-size: 11px;
       }
       .textAreaContactSection textarea:placeholder-shown + label{
         cursor: text;
@@ -1523,7 +1523,7 @@ a.dropNone{
         cursor: pointer;
         font-size: 14px;
         color: #4b4a4c;
-        padding-left: 3px;
+        
         padding-bottom: 10px;
       }
       

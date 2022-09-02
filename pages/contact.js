@@ -91,9 +91,9 @@ function contact() {
                                     <input type="text" className="form-control" autoComplete="off" required />
                                     <label className="floating-label">Subject</label>
                                 </div>
-                                <div className="floating-label-group textarea-label">
-                                    <textarea type="text" className="form-control" autoComplete="off" placeholder='Message' required />
-
+                                <div class="textAreaContactSection">
+                                    <textarea name="textarea" id="textarea" placeholder="message"></textarea>
+                                    <label for="textarea">Message</label>
                                 </div>
                                 <div className='floating-label-group-button'>
                                     <button>Send Message</button>

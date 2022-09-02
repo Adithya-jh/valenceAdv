@@ -1476,3 +1476,55 @@ a.dropNone{
 
 
 }
+
+
+/*Message to Top*/
+
+.textAreaContactSection {
+        display: flex;
+        flex-flow: column-reverse;
+        position:relative;
+        margin: 10px 0px;
+      }
+      .textAreaContactSection label, textarea {
+        transition: all 0.2s;
+        touch-action: manipulation;
+        transform-origin: left bottom;
+        font-size: 13px;
+      }
+      .textAreaContactSection textarea {
+        
+        font-family: inherit;
+        -webkit-appearance: none;
+        cursor: text;
+        color: #4b4a4c;
+        font-size: 16px;
+      }
+      
+      .textAreaContactSection label {
+        font-size: 12px;
+      }
+      .textAreaContactSection textarea:placeholder-shown + label{
+        cursor: text;
+        max-width: 66.66%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transform: translate(0, 2.125rem) scale(1.5);
+      }
+      ::-webkit-input-placeholder{
+        opacity: 0;
+        transition: inherit;
+      }
+      
+      .textAreaContactSection textarea:not(:placeholder-shown) + label,
+      .textAreaContactSection textarea:focus + label{
+        transform: translate(0, 0) scale(1);
+        cursor: pointer;
+        font-size: 14px;
+        color: #4b4a4c;
+        padding-left: 3px;
+        padding-bottom: 10px;
+      }
+      
+      

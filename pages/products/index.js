@@ -43,7 +43,7 @@ const Products = withRouter((props) => {
                                 <option value={12} selected={props.router.query.filter === 11 ? true : false}>Self-Releasing Vacuum Bag Films</option>
                             </select>
                         </span>
-                        {categories > 0 && <Link href={forwardLink}><button>search</button></Link>}
+                        {(categories > 0 || temp!=0) && <Link href={forwardLink}><button>search</button></Link>}
                     </h2>
                 </div>
                 <div className="product-card-container">

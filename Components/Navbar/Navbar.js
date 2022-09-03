@@ -90,17 +90,13 @@ const Navbar = () => {
                                         <li><a className="underlineHover" href="/about-us">About Us</a></li>
                                         <li className="mainLiHover">
                                             <div class="dropdown">
-                                                <button class="dropbtn"><span className="underlineHover">Products</span></button>
+                                                <Link href="/products"><button class="dropbtn"><span className="underlineHover">Products</span></button></Link>
                                                 <div class="dropdown-content product">
-                                                    <a href="#"><span>Room temperature to 120 °C</span></a>
-                                                    <a href="#" className="dropNone"><span></span></a>
-                                                    <a href="#"><span>140 °C to 180 °C</span></a>
-                                                    <a href="#" className="dropNone"><span></span></a>
-                                                    <a href="#"><span>190 °C to 204 °C</span></a>
-                                                    <a href="#" className="dropNone"><span></span></a>
-                                                    <a href="#"><span>204 °C to 260 °C</span></a>
-                                                    <a href="#" className="dropNone"><span></span></a>
-                                                    <a href="#"><span>Resin & Vacuum Assisted Infusion</span></a>
+                                                    <a href="/products?temp=120"><span>Room temperature to 120 °C</span></a>
+                                                    <a href="/products?temp=140_180"><span>140 °C to 180 °C</span></a>
+                                                    <a href="/products?temp=190_204"><span>190 °C to 204 °C</span></a>
+                                                    <a href="/products?temp=204_260"><span>204 °C to 260 °C</span></a>
+                                                    <a href="/products?temp=resin_vacuum"><span>Resin & Vacuum Assisted Infusion</span></a>
                                                 </div>
                                                 {/*<div class="dropdown-content">
                                                     <a href="#" ><span className="dropLinks">Link 1</span></a>

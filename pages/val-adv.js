@@ -106,6 +106,7 @@ const valAdv = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

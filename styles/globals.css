@@ -663,6 +663,7 @@ li.languageHover {
   font-weight: bold;
 
 }
+
 .footerSection {
   font-weight: bold;
 }
@@ -715,27 +716,30 @@ li.languageHover {
   padding-bottom: 10px;
 }
 
-.slider{
-	overflow-y: hidden;
-	max-height: 500px;
+.slider {
+  overflow-y: hidden;
+  max-height: 500px;
   transition-property: all;
-	transition-duration: .5s;	
-	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-}
-.slider p{
-	overflow-y: hidden;
-	max-height: 500px;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
 
-#sliderActive p{
+.slider p {
+  overflow-y: hidden;
+  max-height: 500px;
+}
+
+#sliderActive p {
   max-height: 0;
   transition-property: all;
-	transition-duration: 0.9s;	
-	transition-timing-function: cubic-bezier(0, 1, 0.9, 1);
+  transition-duration: 0.9s;
+  transition-timing-function: cubic-bezier(0, 1, 0.9, 1);
 }
-#sliderActive{
+
+#sliderActive {
   max-height: 0;
 }
+
 .faqHeader p {
   font-size: 24px;
   width: 70%;
@@ -752,7 +756,6 @@ li.languageHover {
   padding: 0;
   margin: 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/08/faq-page-header.jpg?fit=1920%2C600&ssl=1");
-  display: flex;
   background-position: top;
   background-size: cover;
   position: relative;
@@ -1203,6 +1206,7 @@ li.languageHover {
   margin-top: 50px;
   text-align: left;
 }
+
 .dropdown-content.product {
   width: 400%;
   padding: 10px 5px;
@@ -1223,7 +1227,7 @@ li.languageHover {
   display: block;
 }
 
-a.dropNone{
+a.dropNone {
   padding: 0;
   margin: 0;
 }
@@ -1481,50 +1485,152 @@ a.dropNone{
 /*Message to Top*/
 
 .textAreaContactSection {
-        display: flex;
-        flex-flow: column-reverse;
-        position:relative;
-        margin: 10px 0px;
-      }
-      .textAreaContactSection label, textarea {
-        transition: all 0.2s;
-        touch-action: manipulation;
-        transform-origin: left bottom;
-        font-size: 13px;
-      }
-      .textAreaContactSection textarea {
-        
-        font-family: inherit;
-        -webkit-appearance: none;
-        cursor: text;
-        color: #4b4a4c;
-        font-size: 16px;
-      }
-      
-      .textAreaContactSection label {
-        font-size: 11px;
-      }
-      .textAreaContactSection textarea:placeholder-shown + label{
-        cursor: text;
-        max-width: 66.66%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        transform: translate(0, 2.125rem) scale(1.5);
-      }
-      .textAreaContactSection ::-webkit-input-placeholder{
-        opacity: 0;
-        transition: inherit;
-      }
-      
-      .textAreaContactSection textarea:not(:placeholder-shown) + label,
-      .textAreaContactSection textarea:focus + label{
-        transform: translate(0, 0) scale(1);
-        cursor: pointer;
-        font-size: 14px;
-        color: #4b4a4c;
-        
-        padding-bottom: 10px;
-      }
-      
-      
+  display: flex;
+  flex-flow: column-reverse;
+  position: relative;
+  margin: 10px 0px;
+}
+
+.textAreaContactSection label,
+textarea {
+  transition: all 0.2s;
+  touch-action: manipulation;
+  transform-origin: left bottom;
+  font-size: 13px;
+}
+
+.textAreaContactSection textarea {
+
+  font-family: inherit;
+  -webkit-appearance: none;
+  cursor: text;
+  color: #4b4a4c;
+  font-size: 16px;
+}
+
+.textAreaContactSection label {
+  font-size: 11px;
+}
+
+.textAreaContactSection textarea:placeholder-shown+label {
+  cursor: text;
+  max-width: 66.66%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform: translate(0, 2.125rem) scale(1.5);
+}
+
+.textAreaContactSection ::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+
+.textAreaContactSection textarea:not(:placeholder-shown)+label,
+.textAreaContactSection textarea:focus+label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+  font-size: 14px;
+  color: #4b4a4c;
+
+  padding-bottom: 10px;
+}
+
+
+/*VAL ADV*/
+.val-adv-header-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.val-adv-header-item h1 {
+  font-size: 80px;
+  color: white;
+  height: 40%;
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+  padding-bottom: 10px;
+  
+}
+
+
+.val-adv-header-item p {
+  font-size: 24px;
+  width: 70%;
+  color: white;
+  height: 50%;
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  padding-top: 10px;
+  line-height: 1.667em;
+}
+
+.val-adv-header {
+  height: calc(100vh - 120px);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/08/1.jpg?fit=1920%2C1080&ssl=1");
+  background-position: top;
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  top: 0px;
+  width: 100%;
+  z-index: -1;
+}
+
+.val-adv-container {
+  cursor: pointer;
+}
+.val-adv-body{
+  margin-top: 100px;
+}
+.val-adv-body-container{
+  height: 100%;
+  width: 70%;
+  margin: auto;
+  color: #4b4a4c;
+}
+.val-adv-company{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.val-adv-company h1{
+  flex: 1;
+  font-size: 30px;
+  margin-right: 10px;
+  padding-top: 5px;
+}
+.val-adv-company .company-container{
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+.company-container h3{
+  font-size: 22px;
+  line-height: 1.667em;
+}
+.company-container p{
+  line-height: 1.667em;
+  font-size: 16px;
+}
+.val-adv-company .features-wrap{
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+}
+.val-adv-company .about-us-features{
+  margin: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+.val-adv-company .about-us-features-container{
+  margin: 0;
+  margin-top: 25px;
+  margin-right: 100px;
+}

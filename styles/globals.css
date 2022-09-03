@@ -1637,3 +1637,52 @@ textarea {
 .val-adv-body-container .getInTouchSection{
   margin-top: 120px;
 }
+
+@media(max-width: 1150px) {
+  
+  .val-adv-header-item h1 {
+    height: 50%;
+  }
+  
+  
+  .val-adv-header {
+    height: calc(100vh - 70px);
+  }
+
+  .val-adv-body-container{
+    height: 100%;
+    width: 85%;
+    margin: auto;
+    color: #4b4a4c;
+  }
+  .val-adv-company{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+  .val-adv-company h1{
+    margin-right: 50px;
+  }
+  .val-adv-company .company-container{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+  }
+  .val-adv-company .about-us-features-container{
+    margin-right: 20px;
+  }
+}
+
+@media(max-width: 450px) {
+  .val-adv-header-item h1 {
+    font-size: 40px;
+    height: 40%;
+  }
+  .val-adv-header-item p {
+    font-size: 20px;
+  }
+  .val-adv-company{
+    flex-direction: column;
+  }
+  
+}

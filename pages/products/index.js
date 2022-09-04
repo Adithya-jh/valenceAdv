@@ -103,10 +103,10 @@ const Products = withRouter((props) => {
                 <div className="product-card-container">
 
                     <Carousel>
-                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/4.jpg?resize=680%2C920&ssl=1" alt="" width="100%" height="100%"/>
-                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" width="100%" height="100%"/>
-                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/2.jpg?resize=680%2C920&ssl=1" alt=""  width="100%" height="100%"/>
-                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt=""  width="100%" height="100%"/>
+                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/4.jpg?resize=680%2C920&ssl=1" alt="" />
+                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
+                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/2.jpg?resize=680%2C920&ssl=1" alt="" />
+                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
                     </Carousel>
                     <Carousel>
                         <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/4.jpg?resize=680%2C920&ssl=1" alt="" />

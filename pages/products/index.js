@@ -44,6 +44,7 @@ const Products = withRouter((props) => {
 
     var forwardLink = "/products?temp=" + temp + "&" + "filter=" + categories;
 
+
     return (
         <div className="products-section">
             <Navbar />
@@ -67,8 +68,8 @@ const Products = withRouter((props) => {
 
                         </span>
 
-                        in 
-                        
+                        in
+
                         <span class="product-dropdown">
 
                             <OutsideClickHandler onOutsideClick={() => { setCategoriesClick(false) }}>
@@ -87,18 +88,18 @@ const Products = withRouter((props) => {
                                 <div onClick={() => { setCategories(9) }} className={categories == 9 && "product-dropdown-selected"}>Infusion tooling & tools</div>
                                 <div onClick={() => { setCategories(10) }} className={categories == 10 && "product-dropdown-selected"}>Breathers & Bleeders</div>
                                 <div onClick={() => { setCategories(11) }} className={categories == 11 && "product-dropdown-selected"}>Self-Releasing Vacuum Bag Films</div>
-                                
+
                             </span>
 
                         </span>
-                        
+
                         {(categories || temp) && <Link href={forwardLink}><button>search</button></Link>}
                     </h2>
                 </div>
                 <div className="product-card-container">
                     <div class="product-card">
                         <figure>
-                            <img src="https://i2.wp.com/konte.uix.store/wp-content/uploads/2018/09/1-3.jpg?resize=680%2C920&ssl=1" alt="t-shirt" />
+                            <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/09/1-25.jpg?resize=680%2C920&ssl=1" alt="t-shirt" />
                         </figure>
                         <section className="product-card-space">
                         </section>

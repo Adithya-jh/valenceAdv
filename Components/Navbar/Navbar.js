@@ -90,19 +90,14 @@ const Navbar = () => {
                                         <li><a className="underlineHover" href="/about-us">About Us</a></li>
                                         <li className="mainLiHover">
                                             <div class="dropdown">
-                                                <Link href="/products"><button class="dropbtn"><span className="underlineHover">Products</span></button></Link>
+                                                <Link href="/products?temp=everything"><button class="dropbtn"><span className="underlineHover">Products</span></button></Link>
                                                 <div class="dropdown-content product">
-                                                    <a href="/products?temp=120"><span>Room temperature to 120 °C</span></a>
-                                                    <a href="/products?temp=140_180"><span>140 °C to 180 °C</span></a>
-                                                    <a href="/products?temp=190_204"><span>190 °C to 204 °C</span></a>
-                                                    <a href="/products?temp=204_260"><span>204 °C to 260 °C</span></a>
+                                                    <a href="/products?temp=_120"><span>Room temperature to 120 °C</span></a>
+                                                    <a href="/products?temp=_140_180"><span>140 °C to 180 °C</span></a>
+                                                    <a href="/products?temp=_190_204"><span>190 °C to 204 °C</span></a>
+                                                    <a href="/products?temp=_204_260"><span>204 °C to 260 °C</span></a>
                                                     <a href="/products?temp=resin_vacuum"><span>Resin & Vacuum Assisted Infusion</span></a>
                                                 </div>
-                                                {/*<div class="dropdown-content">
-                                                    <a href="#" ><span className="dropLinks">Link 1</span></a>
-                                                    <a href="#"><span>Link 1</span></a>
-                                                    <a href="#"><span>Link 1</span></a>
-                                                </div>*/}
                                             </div>
                                         </li>
                                         <li className="mainLiHover">

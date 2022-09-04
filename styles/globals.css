@@ -1699,7 +1699,7 @@ textarea {
   padding-top: 50px;
 }
 .product-header-container{
-  padding: 50px 0px;
+  padding-top: 50px;
 }
 .product-header-container h2{
   font-size: 25px;
@@ -1726,6 +1726,7 @@ textarea {
   font-size: 25px;
   border: none;
   font-weight: bold;
+  cursor: pointer;
 }
 .product-card-container{
   margin: 50px 0px;
@@ -1792,4 +1793,58 @@ textarea {
   text-transform: uppercase;
   font-size: 15px;
   font-weight: bold;
+}
+
+
+/*Product Dropdown */
+
+.product-dropbtn {  
+  margin: 0px 16px;
+}
+.product-dropdown button h2{
+  border-bottom: 2px solid #4b4a4c;
+  color: #4b4a4c;
+  font-weight: 600;
+  display: flex;
+  padding-bottom: 5px;
+}
+.product-dropdown button h2 i{
+  padding-left: 20px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+.product-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.product-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 450px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  color: #4b4a4c;
+  cursor: pointer;
+}
+
+.product-dropdown-content div {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.product-dropdown-content div:hover {
+  background-color: #2D4798;
+  color: white;
+}
+
+.product-dropdown-content.active {
+  display: block;
+}
+.product-dropdown-selected{
+  background-color: #4b4a4c;
+  color: white;
 }

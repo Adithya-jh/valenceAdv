@@ -1789,6 +1789,9 @@ textarea {
   margin: auto;
   height: 100%;
 }
+
+/*carousel*/
+
 .carousel {
   align-items: center;
   display: flex;
@@ -1805,12 +1808,13 @@ textarea {
   transition: transform 0.25s;
 
 }
+/*
 
 .carousel__images img {
   width: 100%;
   height: 100%;
 }
-
+*/
 .carousel__button {
   background: transparent;
   border: 0;

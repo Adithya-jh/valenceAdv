@@ -45,6 +45,23 @@ const Products = withRouter((props) => {
     var forwardLink = "/products?temp=" + temp + "&" + "filter=" + categories;
 
 
+
+    const [imageIndex, setImageIndex] = useState(1);
+    const [translateX, setTranslateX] = useState(0);
+
+    const handleCarouselPrevious = () => {      
+        if(imageIndex>1){
+            setTranslateX(translateX + 300)
+            setImageIndex(imageIndex - 1)
+        }           
+    }
+    const handleCarouselNext = () => {
+        if (imageIndex < 4) {
+            setImageIndex(imageIndex + 1)
+            setTranslateX(translateX - 300)
+        }
+    }
+
     return (
         <div className="products-section">
             <Navbar />
@@ -97,13 +114,22 @@ const Products = withRouter((props) => {
                     </h2>
                 </div>
                 <div className="product-card-container">
+
                     <div class="product-card">
                         <figure>
-                            <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/09/1-25.jpg?resize=680%2C920&ssl=1" alt="t-shirt" />
+                            <div class="carousel">
+                                <button class="carousel__button previous" id="previous" onClick={handleCarouselPrevious}>{"<"}</button>
+                                <div class="carousel__images" style={{transform:`translateX(${translateX}px)`}}>
+                                    <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/4.jpg?resize=680%2C920&ssl=1" alt="" />
+                                    <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
+                                    <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/2.jpg?resize=680%2C920&ssl=1" alt="" />
+                                    <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
+                                </div>
+                                <button class="carousel__button next" id="next" onClick={handleCarouselNext}>{">"}</button>
+                            </div>
                         </figure>
                         <section className="product-card-space">
                         </section>
-
                         <section class="details">
                             <div class="min-details">
                                 <h1>Product 1</h1>
@@ -111,13 +137,22 @@ const Products = withRouter((props) => {
                             <a href="#" class="productToCart">add to cart</a>
                         </section>
                     </div>
+
                     <div class="product-card">
                         <figure>
-                            <img src="https://i0.wp.com/konte.uix.store/wp-content/uploads/2018/09/1-23.jpg?resize=680%2C920&ssl=1" alt="t-shirt" />
+                            <div class="carousel">
+                                <button class="carousel__button previous" id="previous" onClick={handleCarouselPrevious}>{"<"}</button>
+                                <div class="carousel__images" style={{transform:`translateX(${translateX}px)`}}>
+                                    <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/4.jpg?resize=680%2C920&ssl=1" alt="" />
+                                    <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
+                                    <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/2.jpg?resize=680%2C920&ssl=1" alt="" />
+                                    <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
+                                </div>
+                                <button class="carousel__button next" id="next" onClick={handleCarouselNext}>{">"}</button>
+                            </div>
                         </figure>
                         <section className="product-card-space">
                         </section>
-
                         <section class="details">
                             <div class="min-details">
                                 <h1>Product 2</h1>
@@ -125,13 +160,22 @@ const Products = withRouter((props) => {
                             <a href="#" class="productToCart">add to cart</a>
                         </section>
                     </div>
+
                     <div class="product-card">
                         <figure>
-                            <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="t-shirt" />
+                            <div class="carousel">
+                                <button class="carousel__button previous" id="previous" onClick={handleCarouselPrevious}>{"<"}</button>
+                                <div class="carousel__images" style={{transform:`translateX(${translateX}px)`}}>
+                                    <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/4.jpg?resize=680%2C920&ssl=1" alt="" />
+                                    <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
+                                    <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/2.jpg?resize=680%2C920&ssl=1" alt="" />
+                                    <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
+                                </div>
+                                <button class="carousel__button next" id="next" onClick={handleCarouselNext}>{">"}</button>
+                            </div>
                         </figure>
                         <section className="product-card-space">
                         </section>
-
                         <section class="details">
                             <div class="min-details">
                                 <h1>Product 3</h1>
@@ -139,13 +183,22 @@ const Products = withRouter((props) => {
                             <a href="#" class="productToCart">add to cart</a>
                         </section>
                     </div>
+
                     <div class="product-card">
                         <figure>
-                            <img src="https://i2.wp.com/konte.uix.store/wp-content/uploads/2018/09/1-24.jpg?resize=680%2C920&ssl=1" alt="t-shirt" />
+                            <div class="carousel">
+                                <button class="carousel__button previous" id="previous" onClick={handleCarouselPrevious}>{"<"}</button>
+                                <div class="carousel__images" style={{transform:`translateX(${translateX}px)`}}>
+                                    <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/4.jpg?resize=680%2C920&ssl=1" alt="" />
+                                    <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
+                                    <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/2.jpg?resize=680%2C920&ssl=1" alt="" />
+                                    <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
+                                </div>
+                                <button class="carousel__button next" id="next" onClick={handleCarouselNext}>{">"}</button>
+                            </div>
                         </figure>
                         <section className="product-card-space">
                         </section>
-
                         <section class="details">
                             <div class="min-details">
                                 <h1>Product 4</h1>
@@ -153,24 +206,31 @@ const Products = withRouter((props) => {
                             <a href="#" class="productToCart">add to cart</a>
                         </section>
                     </div>
+
                     <div class="product-card">
                         <figure>
-                            <img src="https://i2.wp.com/konte.uix.store/wp-content/uploads/2018/09/1-4.jpg?resize=680%2C920&ssl=1" alt="t-shirt" />
+                            <div class="carousel">
+                                <button class="carousel__button previous" id="previous" onClick={handleCarouselPrevious}>{"<"}</button>
+                                <div class="carousel__images" style={{transform:`translateX(${translateX}px)`}}>
+                                    <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/4.jpg?resize=680%2C920&ssl=1" alt="" />
+                                    <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
+                                    <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/2.jpg?resize=680%2C920&ssl=1" alt="" />
+                                    <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
+                                </div>
+                                <button class="carousel__button next" id="next" onClick={handleCarouselNext}>{">"}</button>
+                            </div>
                         </figure>
                         <section className="product-card-space">
                         </section>
-
                         <section class="details">
                             <div class="min-details">
                                 <h1>Product 5</h1>
                             </div>
                             <a href="#" class="productToCart">add to cart</a>
                         </section>
-
-                    </div>
+                    </div>                   
 
                 </div>
-
             </div>
             <Footer />
         </div >

@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Nanum+Gothic:wght@400;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /*font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;*/
+  font-family: 'Bai Jamjuree', sans-serif;
 }
 
 a {
@@ -16,8 +18,9 @@ a {
 
 * {
   box-sizing: border-box;
-  /*font-family: 'Quicksand', sans-serif;*/
-  font-family: 'Nanum Gothic', sans-serif;
+  /*font-family: 'Quicksand', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;*/
+  font-family: 'Bai Jamjuree', sans-serif;
 }
 
 
@@ -95,7 +98,7 @@ li.languageHover {
 }
 
 .navbarContainer h1 {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Bai Jamjuree', sans-serif;
 }
 
 .navbarContainer li label {
@@ -126,7 +129,7 @@ li.languageHover {
   display: inline-block;
 }
 
-.cart p {
+/*}.cart p {
   display: inline-block;
   margin: 0px 10px;
   padding: 1px 5px;
@@ -141,6 +144,8 @@ li.languageHover {
   padding: 6px 6px;
   border-radius: 50%;
 }
+*/
+
 
 .cart i {
   font-size: 20px;
@@ -202,6 +207,27 @@ li.languageHover {
   display: none;
 }
 
+.val-ad-Container p {
+  margin: 0;
+  font-size: 10px;
+  font-style: italic;
+  color: #7a7a7a;
+  padding-top: 3px;
+
+}
+
+.cart span {
+  padding: 3px 6px;
+  border-radius: 50%;
+  background: #4b4a4c;
+  color: white;
+  font-size: 9px;
+}
+
+.cartNum {
+  padding-left: 5px;
+}
+
 
 
 @media (prefers-color-scheme: dark) {
@@ -218,8 +244,10 @@ li.languageHover {
 
 @media(max-width: 1250px) {
 
+
   .navbar {
     position: fixed;
+    z-index: 1;
   }
 
   .openClose {
@@ -1094,11 +1122,20 @@ li.languageHover {
   margin-bottom: 150px;
   transition: 0.5s;
   border: none;
+  color: white;
 }
 
 .floating-label-group-button button:hover {
   background-color: #2D4798;
+  color: white;
 }
+
+.india-Office p {
+  margin: 0;
+  font-size: 13px;
+  font-style: italic;
+}
+
 
 @media(max-width: 550px) {
   .entry-titles {
@@ -1762,18 +1799,26 @@ textarea {
 }
 
 .product-card-container {
-  margin: 100px 0px;
+  margin-top: 100px;
   margin-bottom: 100px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  margin-left: 0px;
+  margin-right: 0px;
 }
+
+/*.product-card-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}*/
 
 .product-card {
   position: relative;
   height: 100%;
   overflow: hidden;
-  width: 300px;
+  width: 22%;
+  margin: 0px 20px;
   color: #4b4a4c;
   margin-bottom: 50px;
   transition: box-shadow .3s ease-in-out,
@@ -1788,6 +1833,31 @@ textarea {
   width: 100%;
   margin: auto;
   height: 100%;
+}
+
+
+@media(max-width: 1485px) {
+  .product-card {
+    width: 30%;
+  }
+}
+
+@media(max-width: 1435px) {
+  .product-card {
+    width: 27%;
+  }
+}
+
+@media(max-width: 700px) {
+  .product-card {
+    width: 40%;
+  }
+}
+
+@media(max-width: 450px) {
+  .product-card {
+    width: 100%;
+  }
 }
 
 /*carousel*/
@@ -1825,7 +1895,7 @@ textarea {
   height: 50px;
   width: 30px;
   position: absolute;
-  transition: opacity 0.25s;  
+  transition: opacity 0.25s;
   z-index: 1;
 }
 
@@ -1846,13 +1916,15 @@ textarea {
   bottom: 0;
 }
 
-.product-card:hover .carousel__button{
+.product-card:hover .carousel__button {
   display: block;
   background-color: white;
 }
-.product-card:hover{
+
+.product-card:hover {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
+
 .details {
   background-color: white;
   padding: 15px 30px;
@@ -1869,16 +1941,30 @@ textarea {
   margin-bottom: 15px;
 }
 
-.details>.min-details {
-  display: flex;
-  justify-content: space-between;
-
-}
 
 .details>.min-details>h1 {
   display: block;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #2D4798;
+  margin: 0;
+}
+
+.details>.min-details>h2 {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b4a4c;
+  margin: 0;
+}
+
+.details>.min-details>p {
+  display: block;
+  font-size: 12px;
   font-weight: 300;
+  color: #4b4a4c;
+  font-style: italic;
+  margin: 0;
 }
 
 
@@ -1886,6 +1972,10 @@ textarea {
   text-transform: uppercase;
   font-size: 15px;
   font-weight: bold;
+}
+
+.details a:hover {
+  color: #6c6c6c;
 }
 
 
@@ -1947,3 +2037,263 @@ textarea {
 }
 
 /*Card Carasoul*/
+
+
+/*product detail page*/
+
+.product-page-main {
+  color: #4b4a4c;
+  width: 100%;
+  height: 100%;
+}
+
+
+.product-navigation {
+  display: flex;
+}
+
+.product-navigation p {
+  padding-right: 5px;
+  transition: 0.2s;
+}
+
+.product-navigation p:hover {
+  color: #2D4798;
+}
+
+.product-navigation i {
+  font-size: 10px;
+}
+
+.products-navbar {
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.product-next-prev {
+  display: flex;
+}
+
+.product-next-prev p {
+  padding-left: 30px;
+  transition: 0.2s;
+}
+
+.product-next-prev p:hover {
+  color: #2D4798;
+}
+
+.products-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+
+.main-product-container {
+  background-color: #ecf8f9;
+  height: 100%;
+}
+
+.product-details-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
+
+.product-details-container img {
+  flex: 1;
+  width: 35%;
+  height: 100%;
+}
+.emptyClass {
+  flex: 1;
+}
+.products-info-container {
+  flex: 1;
+  padding-left: 10px;
+  padding-top: 60px;
+}
+
+/* increment button*/
+
+.wrapper {
+  color: #4b4a4c;
+  display: flex;
+  width: 100px;
+  padding: 7px 10px;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #c4c4c4;
+  border-radius: 2px;
+}
+
+.prod-download-section {
+  padding-bottom: 25px;
+}
+
+.wrapper span {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+
+  color: #343434;
+  user-select: none;
+}
+
+.wrapper span.num {
+  font-size: 15px;
+  font-weight: 500;
+  pointer-events: none;
+  color: #6c6c6c;
+}
+
+/*increment button*/
+
+
+.prod-infos {
+  display: flex;
+}
+
+.prod-prop {
+  margin-right: 30px;
+}
+
+.prod-prop h3 {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+
+.prod-add {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.prod-add button {
+  width: 360px;
+  padding: 15px;
+  color: white;
+  background-color: #4b4a4c;
+  border: none;
+  transition: 0.2s;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.prod-add button:hover {
+  background-color: #2D4798;
+  color: white;
+}
+
+.prod-intro h1 {
+  color: #2D4798;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+.prod-intro h2 {
+  color: #4b4a4c;
+  padding-bottom: 5px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.prod-intro p {
+  color: #4b4a4c;
+  font-style: italic;
+  margin-top: 0;
+}
+
+.prod-download-section {
+  display: flex;
+}
+
+.prod-download-section p {
+  margin: 0;
+  padding-left: 20px;
+  font-weight: 500
+}
+
+.prod-download-section i {
+  color: #2D4798;
+}
+
+.prod-download-section {
+  cursor: pointer;
+}
+
+@media(max-width: 1250px) {
+
+  .products-info-container {
+    flex: 1;
+    padding-left: 5px;
+    padding-top: 5px;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+  }
+
+  .emptyClass {
+    display: none;
+  }
+
+  .prod-download-section {
+    padding-bottom: 25px;
+  }
+
+}
+
+@media(max-width: 800px) {
+
+  .product-details-container {
+    flex-direction: column;
+  }
+
+  .product-details-container img {
+    width: 100%;
+  }
+
+
+  .prod-add button {
+    width: 100%;
+  }
+
+  .prod-intro h1 {
+    padding-top: 50px;
+    font-size: 24px;
+  }
+
+  .prod-intro h2 {
+    font-size: 16px;
+  }
+
+  .prod-intro p {
+    font-size: 12px;
+  }
+
+  .prod-prop {
+    font-size: 14px;
+  }
+
+}
+
+@media(max-width: 500px) { 
+  .products-navbar {
+    display: none;
+  }
+  .prod-infos {
+    flex-direction: column;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  .prod-prop {
+    margin: 0;
+  }
+}

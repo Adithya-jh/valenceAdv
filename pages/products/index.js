@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from 'next/link'
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
-import Carousel from "../../Components/Carousel/Carousel";
+import MyCarousel from "../../Components/MyCarousel/MyCarousel";
 const Products = withRouter((props) => {
 
     const [temp, setTemp] = useState(false);
@@ -23,7 +23,7 @@ const Products = withRouter((props) => {
         resin_vacuum: "Resin & Vacuum Assisted Infusion"
     }
     const filter = {
-        0: "all categories",
+        0: "all process temperature",
         1: "Vacuum bagging films",
         2: "Release films",
         3: "Release fabric & peel ply",
@@ -80,7 +80,7 @@ const Products = withRouter((props) => {
                                 <button class="product-dropbtn" onClick={() => { setCategoriesClick(true) }}><h2>{filter[categories]} <i class="fa-solid fa-angle-down"></i></h2></button>
                             </OutsideClickHandler>
                             <span class={categoriesClick ? "product-dropdown-content active" : "product-dropdown-content"}>
-                                <div onClick={() => { setCategories(0) }} className={categories == 0 && "product-dropdown-selected"}>all categories</div>
+                                <div onClick={() => { setCategories(0) }} className={categories == 0 && "product-dropdown-selected"}>all process temperature</div>
                                 <div onClick={() => { setCategories(1) }} className={categories == 1 && "product-dropdown-selected"}>Vacuum bagging films</div>
                                 <div onClick={() => { setCategories(2) }} className={categories == 2 && "product-dropdown-selected"}>Release films</div>
                                 <div onClick={() => { setCategories(3) }} className={categories == 3 && "product-dropdown-selected"}>Release fabric & peel ply</div>
@@ -102,36 +102,21 @@ const Products = withRouter((props) => {
                 </div>
                 <div className="product-card-container">
 
-                    <Carousel>
+                    <MyCarousel>
+                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
+                    </MyCarousel>
+                    <MyCarousel>
                         <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/4.jpg?resize=680%2C920&ssl=1" alt="" />
-                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
+                    </MyCarousel>
+                    <MyCarousel>
                         <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/2.jpg?resize=680%2C920&ssl=1" alt="" />
+                    </MyCarousel>
+                    <MyCarousel>
                         <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
-                    </Carousel>
-                    <Carousel>
-                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/4.jpg?resize=680%2C920&ssl=1" alt="" />
+                    </MyCarousel>
+                    <MyCarousel>
                         <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
-                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/2.jpg?resize=680%2C920&ssl=1" alt="" />
-                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
-                    </Carousel>
-                    <Carousel>
-                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/4.jpg?resize=680%2C920&ssl=1" alt="" />
-                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
-                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/2.jpg?resize=680%2C920&ssl=1" alt="" />
-                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
-                    </Carousel>
-                    <Carousel>
-                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/4.jpg?resize=680%2C920&ssl=1" alt="" />
-                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
-                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/2.jpg?resize=680%2C920&ssl=1" alt="" />
-                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
-                    </Carousel>
-                    <Carousel>
-                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/4.jpg?resize=680%2C920&ssl=1" alt="" />
-                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
-                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/2.jpg?resize=680%2C920&ssl=1" alt="" />
-                        <img src="https://i1.wp.com/konte.uix.store/wp-content/uploads/2018/04/1.jpg?resize=680%2C920&ssl=1" alt="" />
-                    </Carousel>
+                    </MyCarousel>
 
                 </div>
             </div>
